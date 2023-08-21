@@ -23,19 +23,19 @@ public class Quest : ScriptableObject
 
     public string UniqueName 
     {
-        get => uniqueName;
+        get => uniqueName; 
         private set => uniqueName = value;
     }
 
     public string Description
     {
-        get => description;
+        get => description; 
         private set => description = value;
     }
 
     public Objective[] Objectives
     {
-        get => objectives;
+        get => objectives; 
         private set => objectives = value;
     }
 

@@ -8,13 +8,28 @@ public class Objective
 {
     [Header("Objective details")]
     [Tooltip("Objective description to display under Quest in-game.")]
-    public string description;
+    [SerializeField] private string description;
 
     [Tooltip("What trigger to QuestManager will complete this objective.")]
-    public string trigger;
+    [SerializeField] private string trigger;
+
+    [Tooltip("What to display if the player gets stuck")]
+    [SerializeField] private string hintText;
 
     [HideInInspector] public bool objComplete = false;
     [HideInInspector] public event Action ObjectiveComplete;
+
+    public string Description
+    {
+        get => description;
+        private set => description = value;
+    }
+
+    public string HintText
+    {
+        get => hintText;
+        private set => hintText = value;
+    }
 
     public void Initialize()
     {

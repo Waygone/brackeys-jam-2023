@@ -14,6 +14,7 @@ public class QuestManager : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI questText;
+    [SerializeField] private TextMeshProUGUI hintText;
     [SerializeField] private Transform questContainer;
     [SerializeField] private GameObject objectivePrefab;
     [SerializeField] private GameObject questComplete;
@@ -62,6 +63,8 @@ public class QuestManager : MonoBehaviour
 
         currentObjectiveText = Instantiate(objectivePrefab, questContainer).GetComponent<TextMeshProUGUI>();
         currentObjectiveText.text = currentQuest.currentObjective.ToString();
+
+        hintText.text = currentQuest.currentObjective.HintText;
     }
 
     public void FinishQuest()
