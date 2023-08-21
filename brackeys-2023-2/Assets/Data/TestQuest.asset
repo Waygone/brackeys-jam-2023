@@ -17,13 +17,16 @@ MonoBehaviour:
   objectives:
   - description: Press spacebar
     trigger: Space
-    objComplete: 0
+    objComplete: 1
   - description: Press Arrow Key Up
     trigger: Arrow
-    objComplete: 0
+    objComplete: 1
   - description: Press P
     trigger: P
-    objComplete: 0
+    objComplete: 1
+  - description: Press T
+    trigger: T
+    objComplete: 1
   currentObjective:
     description: 
     trigger: 

@@ -28,5 +28,10 @@ public class QuestSystemTest : MonoBehaviour
         {
             QuestManager.instance.TriggerQuestObj("P");
         }
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            QuestManager.instance.TriggerQuestObj("T");
+        }
     }
 }

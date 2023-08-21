@@ -10,12 +10,13 @@ public class QuestManager : MonoBehaviour
 
     public static event Action<string> ObjectiveTrigger;
 
-    [Header("UI")]
-    public TextMeshProUGUI questText;
-    public Transform questContainer;
-    public GameObject objectivePrefab;
-
     public Quest currentQuest { get; private set; }
+
+    [Header("UI")]
+    [SerializeField] private TextMeshProUGUI questText;
+    [SerializeField] private Transform questContainer;
+    [SerializeField] private GameObject objectivePrefab;
+    [SerializeField] private GameObject questComplete;
 
     private TextMeshProUGUI currentObjectiveText;
 
@@ -67,7 +68,6 @@ public class QuestManager : MonoBehaviour
     {
         currentQuest = null;
         currentObjectiveText.text = "<s>" + currentObjectiveText.text + "</s>";
-
-        Debug.Log("Quest completed");
+        questComplete.SetActive(true);
     }
 }
