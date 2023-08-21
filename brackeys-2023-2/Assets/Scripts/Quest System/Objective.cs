@@ -18,15 +18,21 @@ public class Objective
 
     public void Initialize()
     {
-        QuestManager.QuestTrigger += ObjTriggered;
+        objComplete = false;
+        QuestManager.ObjectiveTrigger += ObjTriggered;
     }
 
-    public void ObjTriggered(string questTrigger)
+    public void ObjTriggered(string objectiveTrigger)
     {
-        if (questTrigger == trigger && !objComplete)
+        if (objectiveTrigger == trigger && !objComplete)
         {
             objComplete = true;
-            ObjectiveComplete.Invoke();
+            ObjectiveComplete?.Invoke();
         }
+    }
+
+    public override string ToString()
+    {
+        return description;
     }
 }

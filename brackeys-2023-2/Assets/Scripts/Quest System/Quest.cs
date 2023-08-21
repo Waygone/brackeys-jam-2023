@@ -45,7 +45,17 @@ public class Quest : ScriptableObject
         private set => currentObjective = value;
     }
 
-    public void NextObjective()
+    public void StartQuest()
+    {
+        foreach (var obj in objectives)
+        {
+            obj.Initialize();
+        }
+
+        NextObjective();
+    }
+
+    private void NextObjective()
     {
         if (currentObjective != null)
         {
@@ -57,10 +67,11 @@ public class Quest : ScriptableObject
         if (currentObjective == null)
         {
             questComplete = true;
-            // Will send message to QuestManager here.
+            QuestManager.instance.FinishQuest();
         } else
         {
             currentObjective.ObjectiveComplete += NextObjective;
+            QuestManager.instance.UpdateObjective();
         }
     }
 }
