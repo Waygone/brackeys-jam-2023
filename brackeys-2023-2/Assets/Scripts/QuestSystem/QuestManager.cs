@@ -20,6 +20,7 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private GameObject questComplete;
 
     private TextMeshProUGUI currentObjectiveText;
+    private List<GameObject> spawnedObjectiveTexts = new List<GameObject>();
 
     private void Awake()
     {
@@ -61,7 +62,9 @@ public class QuestManager : MonoBehaviour
             currentObjectiveText.text = "<s>" + currentObjectiveText.text + "</s>";
         }
 
-        currentObjectiveText = Instantiate(objectivePrefab, questContainer).GetComponent<TextMeshProUGUI>();
+        var currentObjective = Instantiate(objectivePrefab, questContainer);
+        spawnedObjectiveTexts.Add(currentObjective);
+        currentObjectiveText = currentObjective.GetComponent<TextMeshProUGUI>();
         currentObjectiveText.text = currentQuest.currentObjective.ToString();
 
         hintText.text = currentQuest.currentObjective.HintText;
@@ -69,6 +72,10 @@ public class QuestManager : MonoBehaviour
 
     public void FinishQuest()
     {
+        questText.text = "No Active Quest";
+        spawnedObjectiveTexts.ForEach(x => Destroy(x));
+        spawnedObjectiveTexts.Clear();
+
         currentQuest = null;
         currentObjectiveText.text = "<s>" + currentObjectiveText.text + "</s>";
         questComplete.SetActive(true);
