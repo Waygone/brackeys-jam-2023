@@ -3,12 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class QuestManager : MonoBehaviour
 {
     public static QuestManager instance { get; private set; }
 
     public static event Action<string> ObjectiveTrigger;
+
+    public UnityEvent QuestOrObjectiveUpdated;
 
     public Quest currentQuest { get; private set; }
 
@@ -53,6 +56,8 @@ public class QuestManager : MonoBehaviour
         questText.text = questToBegin.Description;
 
         currentQuest.StartQuest();
+
+        QuestOrObjectiveUpdated.Invoke();
     }
 
     public void UpdateObjective()
@@ -68,6 +73,8 @@ public class QuestManager : MonoBehaviour
         currentObjectiveText.text = currentQuest.currentObjective.ToString();
 
         hintText.text = currentQuest.currentObjective.HintText;
+
+        QuestOrObjectiveUpdated.Invoke();
     }
 
     public void FinishQuest()
