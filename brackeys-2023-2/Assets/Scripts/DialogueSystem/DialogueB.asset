@@ -18,8 +18,7 @@ MonoBehaviour:
     Message: Apply<b> <gradient="Yellow to Orange - Vertical">any <gradient="Light
       to Dark Green - Vertical">gradient <gradient="Blue to Purple - Vertical">preset</gradient>
       </b>to your text
-    SpeedSecondsPerCharacter: 0.1
+    SecondsPerCharacter: 0.1
   - Title: A
-    Message: <alpha=#FF>FF <alpha=#CC>CC <alpha=#AA>AA <alpha=#88>88 <alpha=#66>66
-      <alpha=#44>44 <alpha=#22>22 <alpha=#00>00
-    SpeedSecondsPerCharacter: 0.05
+    Message: The <i>quick brown fox</i> jumps over the <b>lazy dog</b>.
+    SecondsPerCharacter: 0.1

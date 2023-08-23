@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a800a2e71d9a547db9c63a6d4026e96d, type: 3}
+  m_Name: BookA
+  m_EditorClassIdentifier: 
+  Id: a
+  Pages:
+  - Text: Page 0 (Title A)
+  - Text: Page 1
+  - Text: Page 2
+  - Text: Page 3 (End A)
+  PagesPerView: 2
