@@ -18,12 +18,17 @@ public class MovePathDB : MonoBehaviour
 
     private void Start()
     {
-        //QuestManager.instance.QuestOrObjectiveUpdated.AddListener(UpdateMovePath);
+        QuestManager.instance.QuestOrObjectiveUpdated.AddListener(UpdateMovePath);
         UpdateMovePath();
     }
 
     private void UpdateMovePath()
     {
-        currentNpcMovePath = npcMovePaths.LastOrDefault(x => x.ValidMovePath());
+        var newMovePath = npcMovePaths.LastOrDefault(x => x.ValidMovePath());
+        if (newMovePath != null && newMovePath != currentNpcMovePath)
+        {
+            currentNpcMovePath = newMovePath;
+            npcMovement.Move(currentNpcMovePath);
+        }
     }
 }

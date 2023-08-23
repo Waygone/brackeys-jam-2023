@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44bd168f44210214a859b952958cfb14, type: 3}
   m_Name: MovePath
   m_EditorClassIdentifier: 
-  pathDirections: 00000000000000000000000000000000
+  pathDirections: 000000000000000000000000000000000300000003000000010000000100000001000000010000000200000002000000
   loop: 0
-  hasStartPosition: 0
-  StartPosition: {x: 0, y: 0}
+  startPosition:
+    hasStartPosition: 0
+    startPosition: {x: 0, y: 0}
   levelName: 
   questId: 
   objectiveId: 

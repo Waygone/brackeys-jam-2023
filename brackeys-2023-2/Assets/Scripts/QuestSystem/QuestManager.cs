@@ -85,6 +85,6 @@ public class QuestManager : MonoBehaviour
 
         currentQuest = null;
         currentObjectiveText.text = "<s>" + currentObjectiveText.text + "</s>";
-        questComplete.SetActive(true);
+        //questComplete.SetActive(true);
     }
 }
