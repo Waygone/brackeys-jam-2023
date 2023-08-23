@@ -11,6 +11,8 @@ public class NpcMovePath : ScriptableObject
     [SerializeField] private MovementDirection[] pathDirections;
 
     [SerializeField] private bool loop;
+    [SerializeField] private float timeWaitAtEachPosition = 0.1f;
+    [SerializeField] private float timeWaitAtEachTurn = 0.5f;
 
     [SerializeField] private StartPosition startPosition;
 
@@ -37,6 +39,18 @@ public class NpcMovePath : ScriptableObject
     {
         get => startPosition; 
         private set => startPosition = value;
+    }
+
+    public float TimeWaitAtEachPosition
+    {
+        get => timeWaitAtEachPosition;
+        set => timeWaitAtEachPosition = value;
+    }
+
+    public float TimeWaitAtEachTurn
+    {
+        get => timeWaitAtEachTurn;
+        set => timeWaitAtEachTurn = value;
     }
 
     public bool ValidMovePath()

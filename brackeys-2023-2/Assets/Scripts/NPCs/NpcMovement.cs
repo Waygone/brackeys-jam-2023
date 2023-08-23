@@ -39,9 +39,14 @@ public class NpcMovement : MonoBehaviour
             {
                 transform.position = startPosition;
             }
-
+            MovementDirection? preMoveDir = null;
             foreach (MovementDirection moveDir in movePath.PathDirections)
             {
+                if (preMoveDir != null && moveDir != preMoveDir)
+                {
+                    yield return new WaitForSeconds(movePath.TimeWaitAtEachTurn);
+                }
+
                 var moveVector = GetMoveVector(moveDir);
                 var targetLocation = transform.position + moveVector;
 
@@ -51,7 +56,8 @@ public class NpcMovement : MonoBehaviour
                     yield return null;
                 }
 
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(movePath.TimeWaitAtEachPosition);
+                preMoveDir = moveDir;
             }
         } while (queuedNpcMovePath == null && loop);
 
