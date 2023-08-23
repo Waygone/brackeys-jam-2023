@@ -6,9 +6,12 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Quest", menuName = "ScriptableObjects/NewQuest")]
 public class Quest : ScriptableObject
 {
+    [Tooltip("QuestID needs to be unique.")]
+    [SerializeField] private string questId;
+
     [Header("Quest details")]
-    [Tooltip("Needs to be unique.")]
-    [SerializeField] private string uniqueName;
+    [Tooltip("Name of the quest. Keep it short.")]
+    [SerializeField] private string questName;
 
     [Tooltip("Quest description to display on players screen.")]
     [SerializeField] private string description;
@@ -17,14 +20,20 @@ public class Quest : ScriptableObject
     [Tooltip("Objective array needs to be in-order or wrong current objective could display.")]
     [SerializeField] private Objective[] objectives;
 
-    [HideInInspector] public Objective currentObjective;
+    private Objective currentObjective;
 
     private bool questComplete;
 
-    public string UniqueName 
+    public string QuestId
     {
-        get => uniqueName; 
-        private set => uniqueName = value;
+        get => questId; 
+        set => questId = value;
+    }
+
+    public string QuestName 
+    {
+        get => questName; 
+        private set => questName = value;
     }
 
     public string Description
