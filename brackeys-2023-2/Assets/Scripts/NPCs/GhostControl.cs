@@ -29,7 +29,7 @@ public class GhostControl : MonoBehaviour
 
     public void GetHint()
     {
-        var hintText = QuestManager.instance.currentQuest.currentObjective.HintText;
+        var hintText = QuestManager.instance.currentQuest.CurrentObjective.HintText;
         if (!string.IsNullOrEmpty(hintText))
         {
             var hintDialogue = CreateDialogue("Ghost", hintText, 0.1f);
@@ -71,5 +71,5 @@ public struct DialogueChoice
     }
 
     private bool CorrectQuest() => !string.IsNullOrEmpty(questId) ? QuestManager.instance.currentQuest.QuestId == questId : true;
-    private bool CorrectObjective() => !string.IsNullOrEmpty(objectiveId) ? QuestManager.instance.currentQuest.currentObjective.ObjectiveID == objectiveId : true;
+    private bool CorrectObjective() => !string.IsNullOrEmpty(objectiveId) ? QuestManager.instance.currentQuest.CurrentObjective.ObjectiveID == objectiveId : true;
 }

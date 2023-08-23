@@ -45,8 +45,8 @@ public class NpcMovePath : ScriptableObject
     }
 
     private bool CorrectLevel() => !string.IsNullOrEmpty(levelName) ? levelName == SceneManager.GetActiveScene().name : true;
-    private bool CorrectQuest() => !string.IsNullOrEmpty(questId) ? QuestManager.instance.currentQuest.QuestId == questId : true;
-    private bool CorrectObjective() => !string.IsNullOrEmpty(objectiveId) ? QuestManager.instance.currentQuest.currentObjective.ObjectiveID == objectiveId : true;
+    private bool CorrectQuest() => !string.IsNullOrEmpty(questId) ? QuestManager.instance.currentQuest?.QuestId == questId : true;
+    private bool CorrectObjective() => !string.IsNullOrEmpty(objectiveId) ? QuestManager.instance.currentQuest?.CurrentObjective.ObjectiveID == objectiveId : true;
 }
 
 [System.Serializable]

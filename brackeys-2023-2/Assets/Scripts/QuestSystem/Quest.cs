@@ -20,7 +20,7 @@ public class Quest : ScriptableObject
     [Tooltip("Objective array needs to be in-order or wrong current objective could display.")]
     [SerializeField] private Objective[] objectives;
 
-    [HideInInspector] public Objective currentObjective;
+    private Objective currentObjective;
 
     private bool questComplete;
 

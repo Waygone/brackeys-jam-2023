@@ -70,9 +70,9 @@ public class QuestManager : MonoBehaviour
         var currentObjective = Instantiate(objectivePrefab, questContainer);
         spawnedObjectiveTexts.Add(currentObjective);
         currentObjectiveText = currentObjective.GetComponent<TextMeshProUGUI>();
-        currentObjectiveText.text = currentQuest.currentObjective.ToString();
+        currentObjectiveText.text = currentQuest.CurrentObjective.ToString();
 
-        hintText.text = currentQuest.currentObjective.HintText;
+        hintText.text = currentQuest.CurrentObjective.HintText;
 
         QuestOrObjectiveUpdated.Invoke();
     }
