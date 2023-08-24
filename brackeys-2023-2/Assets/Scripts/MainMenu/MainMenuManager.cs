@@ -6,10 +6,14 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField]
     private Canvas _MainCanvas;
     [SerializeField]
+    private Canvas _SettingsCanvas;
+    [SerializeField]
     private Canvas _CreditsCanvas;
 
     [SerializeField]
     private Button _MainPlayButton;
+    [SerializeField]
+    private Button _MainSettingsButton;
     [SerializeField]
     private Button _MainCreditsButton;
     [SerializeField]
@@ -18,26 +22,36 @@ public class MainMenuManager : MonoBehaviour
     private Slider _MainMainVolumeSlider;
     [SerializeField]
     private Slider _MainMusicVolumeSlider;
+
+    [SerializeField]
+    private Button _SettingsBackButton;
     [SerializeField]
     private Button _CreditsBackButton;
 
     private void Start()
     {
         _MainPlayButton.onClick.AddListener(MainCanvasClickPlayHandler);
+        _MainSettingsButton.onClick.AddListener(MainSettingsClickCreditsHandler);
         _MainCreditsButton.onClick.AddListener(MainCanvasClickCreditsHandler);
         _MainQuitButton.onClick.AddListener(MainCanvasClickQuitHandler);
         _MainMainVolumeSlider.onValueChanged.AddListener(MainMainVolumeSliderChangeHandler);
         _MainMusicVolumeSlider.onValueChanged.AddListener(MainMusicVolumeSliderChangeHandler);
 
+        _SettingsBackButton.onClick.AddListener(SettingsCanvasClickBackHandler);
         _CreditsBackButton.onClick.AddListener(CreditCanvasClickBackHandler);
-
-        _MainMainVolumeSlider.value = GlobalData.MainVolume;
-        _MainMusicVolumeSlider.value = GlobalData.MusicVolume;
     }
 
     private void MainCanvasClickPlayHandler()
     {
         LevelManager.Instance.TryAdvanceToNextLevel();
+    }
+    private void MainSettingsClickCreditsHandler()
+    {
+        _MainCanvas.enabled = false;
+        _SettingsCanvas.enabled = true;
+
+        _MainMainVolumeSlider.value = GlobalData.MainVolume;
+        _MainMusicVolumeSlider.value = GlobalData.MusicVolume;
     }
     private void MainCanvasClickCreditsHandler()
     {
@@ -60,6 +74,11 @@ public class MainMenuManager : MonoBehaviour
         Debug.Log("Music volume " + GlobalData.MusicVolume);
     }
 
+    private void SettingsCanvasClickBackHandler()
+    {
+        _SettingsCanvas.enabled = false;
+        _MainCanvas.enabled = true;
+    }
     private void CreditCanvasClickBackHandler()
     {
         _CreditsCanvas.enabled = false;
