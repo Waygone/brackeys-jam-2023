@@ -6,6 +6,9 @@ using UnityEngine;
 [System.Serializable]
 public class Objective
 {
+    [Tooltip("ObjectiveID needs to be unique.")]
+    [SerializeField] private string objectiveId;
+
     [Header("Objective details")]
     [Tooltip("Objective description to display under Quest in-game.")]
     [SerializeField] private string description;
@@ -18,6 +21,12 @@ public class Objective
 
     [HideInInspector] public bool objComplete = false;
     [HideInInspector] public event Action ObjectiveComplete;
+
+    public string ObjectiveID
+    {
+        get => objectiveId;
+        set => objectiveId = value;
+    }
 
     public string Description
     {

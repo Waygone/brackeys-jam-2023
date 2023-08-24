@@ -12,27 +12,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9443c6262cdbb7746a6867360eefe6ea, type: 3}
   m_Name: TestQuest
   m_EditorClassIdentifier: 
-  uniqueName: TestQuest
+  questId: quest1
+  questName: 
   description: Press loads of buttons!
   objectives:
-  - description: Press spacebar
+  - objectiveId: 1
+    description: Press spacebar
     trigger: Space
     hintText: 'Hint: The spacebar is at the bottom of your keyboard'
-    objComplete: 1
-  - description: Press Arrow Key Up
+    objComplete: 0
+  - objectiveId: 2
+    description: Press Arrow Key Up
     trigger: Arrow
     hintText: 'Hint: The Arrows Keys are to the right of your keyboard'
-    objComplete: 1
-  - description: Press P
+    objComplete: 0
+  - objectiveId: 3
+    description: Press P
     trigger: P
     hintText: 'Hint: P is the rightmost letter on your keyboard'
-    objComplete: 1
-  - description: Press T
+    objComplete: 0
+  - objectiveId: 4
+    description: Press T
     trigger: T
     hintText: 'Hint: T is in the top middle of the letters on your keyboard'
-    objComplete: 1
+    objComplete: 0
   currentObjective:
-    description: 
-    trigger: 
-    hintText: 
+    objectiveId: 1
+    description: Press spacebar
+    trigger: Space
+    hintText: 'Hint: The spacebar is at the bottom of your keyboard'
     objComplete: 0

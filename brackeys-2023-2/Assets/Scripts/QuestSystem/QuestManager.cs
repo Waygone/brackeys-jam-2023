@@ -3,12 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class QuestManager : MonoBehaviour
 {
     public static QuestManager instance { get; private set; }
 
     public static event Action<string> ObjectiveTrigger;
+
+    public UnityEvent QuestOrObjectiveUpdated;
 
     public Quest currentQuest { get; private set; }
 
@@ -20,6 +23,7 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private GameObject questComplete;
 
     private TextMeshProUGUI currentObjectiveText;
+    private List<GameObject> spawnedObjectiveTexts = new List<GameObject>();
 
     private void Awake()
     {
@@ -52,6 +56,8 @@ public class QuestManager : MonoBehaviour
         questText.text = questToBegin.Description;
 
         currentQuest.StartQuest();
+
+        QuestOrObjectiveUpdated.Invoke();
     }
 
     public void UpdateObjective()
@@ -61,16 +67,24 @@ public class QuestManager : MonoBehaviour
             currentObjectiveText.text = "<s>" + currentObjectiveText.text + "</s>";
         }
 
-        currentObjectiveText = Instantiate(objectivePrefab, questContainer).GetComponent<TextMeshProUGUI>();
-        currentObjectiveText.text = currentQuest.currentObjective.ToString();
+        var currentObjective = Instantiate(objectivePrefab, questContainer);
+        spawnedObjectiveTexts.Add(currentObjective);
+        currentObjectiveText = currentObjective.GetComponent<TextMeshProUGUI>();
+        currentObjectiveText.text = currentQuest.CurrentObjective.ToString();
 
-        hintText.text = currentQuest.currentObjective.HintText;
+        hintText.text = currentQuest.CurrentObjective.HintText;
+
+        QuestOrObjectiveUpdated.Invoke();
     }
 
     public void FinishQuest()
     {
+        questText.text = "No Active Quest";
+        spawnedObjectiveTexts.ForEach(x => Destroy(x));
+        spawnedObjectiveTexts.Clear();
+
         currentQuest = null;
         currentObjectiveText.text = "<s>" + currentObjectiveText.text + "</s>";
-        questComplete.SetActive(true);
+        //questComplete.SetActive(true);
     }
 }
