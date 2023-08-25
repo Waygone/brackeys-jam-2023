@@ -6,8 +6,10 @@ public class PlayerInteraction : MonoBehaviour
     private Vector2 _InteractionSize;
     [SerializeField]
     private Rigidbody2D _Rigidbody2D;
+    [SerializeField]
+    private Canvas _InteractionCanvas;
 
-    public Vector2 _interactionOffset;
+    private Vector2 _interactionOffset;
     private readonly Vector2 _baseOffset = new(0, -0.1f);
     private IInteractable _focusedInteractable = null;
 
@@ -42,6 +44,8 @@ public class PlayerInteraction : MonoBehaviour
             _focusedInteractable?.ExitInteract();
             _focusedInteractable = newInteractabe;
             _focusedInteractable?.EnterInteract();
+
+            _InteractionCanvas.enabled = _focusedInteractable != null;
         }
     }
 
