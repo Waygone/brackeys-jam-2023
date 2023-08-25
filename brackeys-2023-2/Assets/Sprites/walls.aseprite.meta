@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bcce45b6a6fae894c92c83c20ca7d861
+guid: 2aaa9407be56b214aa53d52efcee872b
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: level1-objects
+  - name: walls
     originalName: 
-    pivot: {x: 0.60509557, y: -0.07954545}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 157
-      height: 88
-    spriteID: 195d9c380a54f4a4198ccb52d9ca1940
+      width: 64
+      height: 64
+    spriteID: abe85135d640c2a40b1415418710230f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,23 +142,23 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1697800170
-    name: level1-objects
+    guid: -614402415
+    name: walls
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: level1-objects
+    - name: walls
       frameIndex: 0
       cellRect:
-        x: 1
-        y: 7
-        width: 157
-        height: 88
-      spriteId: 195d9c380a54f4a4198ccb52d9ca1940
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      spriteId: abe85135d640c2a40b1415418710230f
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 192, y: 96}
+  canvasSize: {x: 64, y: 64}
