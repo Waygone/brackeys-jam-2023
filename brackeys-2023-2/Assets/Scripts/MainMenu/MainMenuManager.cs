@@ -84,4 +84,11 @@ public class MainMenuManager : MonoBehaviour
         _CreditsCanvas.enabled = false;
         _MainCanvas.enabled = true;
     }
+
+    public void Reset()
+    {
+        _MainCanvas.enabled = true;
+        _SettingsCanvas.enabled = false;
+        _CreditsCanvas.enabled = false;
+    }
 }
