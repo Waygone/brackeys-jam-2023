@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2aaa9407be56b214aa53d52efcee872b
+guid: 0fea97b375240cf45be218c43e6a046f
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: walls
+  - name: ghost-npc_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: -0.06521739}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 64
-      height: 64
-    spriteID: abe85135d640c2a40b1415418710230f
+      width: 30
+      height: 46
+    spriteID: e81b22838931fdd45816058f5a3d817c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -139,26 +139,110 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: ghost-npc_Frame_1
+    originalName: 
+    pivot: {x: 0.4827586, y: -0.06666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 58
+      width: 29
+      height: 45
+    spriteID: 879ba079ffb63f449baa78db0abb443e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 58}
+  - name: ghost-npc_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: -0.06521739}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 42
+      y: 4
+      width: 30
+      height: 46
+    spriteID: e27612c7ccfe79746932e5cb4ca7aef7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 42, y: 4}
+  - name: ghost-npc_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: -0.11111112}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 80
+      y: 4
+      width: 30
+      height: 45
+    spriteID: c4a13ebd7fccbe044a1ea1ce0ce0925a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 80, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -614402415
-    name: walls
+    guid: 793583911
+    name: ghost-npc
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: walls
+    - name: ghost-npc_Frame_0
       frameIndex: 0
       cellRect:
         x: 0
-        y: 0
-        width: 64
-        height: 64
-      spriteId: abe85135d640c2a40b1415418710230f
+        y: 3
+        width: 30
+        height: 46
+      spriteId: e81b22838931fdd45816058f5a3d817c
+    - name: ghost-npc_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 1
+        y: 3
+        width: 29
+        height: 45
+      spriteId: 879ba079ffb63f449baa78db0abb443e
+    - name: ghost-npc_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 0
+        y: 3
+        width: 30
+        height: 46
+      spriteId: e27612c7ccfe79746932e5cb4ca7aef7
+    - name: ghost-npc_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 0
+        y: 5
+        width: 30
+        height: 45
+      spriteId: c4a13ebd7fccbe044a1ea1ce0ce0925a
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 64, y: 64}
+  canvasSize: {x: 30, y: 50}
