@@ -10,7 +10,6 @@ public static class GlobalData
     }
 
     public static GameState State;
-
     public static bool TrySetState(GameState state, bool shoud_check = true)
     {
         if (shoud_check)
@@ -24,4 +23,7 @@ public static class GlobalData
         State = state;
         return true;
     }
+
+    public static int MainVolume = 50;
+    public static int MusicVolume = 100;
 }
