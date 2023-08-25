@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class BoxPuzzle : MonoBehaviour, IInteractable
 {
@@ -15,9 +16,9 @@ public class BoxPuzzle : MonoBehaviour, IInteractable
     [SerializeField]
     private NewPlayerMovement _PlayerMovement;
     [SerializeField]
-    private Canvas _InteractionCanvas;
-    [SerializeField]
     private CanMove _CanMove;
+    [SerializeField]
+    private Tilemap _CollisionTilemap;
 
     private Utils.Direction _playerDirection;
     private bool _isMoving = false;
@@ -28,13 +29,6 @@ public class BoxPuzzle : MonoBehaviour, IInteractable
         if (_isMoving || !_isControlled)
         {
             return;
-        }
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            _InteractionCanvas.enabled = false;
-            _PlayerMovement.DisableMoveBox();
-            _isControlled = false;
         }
 
         switch (_playerDirection)
@@ -103,11 +97,11 @@ public class BoxPuzzle : MonoBehaviour, IInteractable
                     float x = Input.GetAxisRaw("Horizontal");
                     if (x == 1)
                     {
-                        Move(Utils.Direction.WEST);
+                        Move(Utils.Direction.EAST);
                     }
                     else if (x == -1)
                     {
-                        Move(Utils.Direction.EAST);
+                        Move(Utils.Direction.WEST);
                     }
                     break;
                 }
@@ -117,6 +111,11 @@ public class BoxPuzzle : MonoBehaviour, IInteractable
     private void Move(Utils.Direction direction)
     {
         Vector3 dir = new(Utils.Directions[(int)direction][0], Utils.Directions[(int)direction][1], 0f);
+        if (!CanMoveTo(dir))
+        {
+            return;
+        }
+
         StartCoroutine(MoveImpl(dir));
     }
     private IEnumerator MoveImpl(Vector3 direction)
@@ -150,7 +149,7 @@ public class BoxPuzzle : MonoBehaviour, IInteractable
         {
             return "";
         }
-        return "Interact [E]";
+        return "Interact / Leave [E]";
     }
     public void ExitInteract()
     {
@@ -163,8 +162,25 @@ public class BoxPuzzle : MonoBehaviour, IInteractable
             return;
         }
 
-        _InteractionCanvas.enabled = true;
-        _PlayerMovement.EnableMoveBox(transform.position, transform.localScale, _CanMove, out _playerDirection);
-        _isControlled = true;
+        if (_isControlled)
+        {
+            _PlayerMovement.DisableMoveBox();
+            _isControlled = false;
+        }
+        else
+        {
+            _PlayerMovement.EnableMoveBox(transform.position, transform.localScale, _CanMove, out _playerDirection);
+            _isControlled = true;
+        }
+    }
+
+    private bool CanMoveTo(Vector3 direction)
+    {
+        Vector3Int gridPos = _CollisionTilemap.WorldToCell(transform.position + direction);
+        if (_CollisionTilemap.HasTile(gridPos))
+        {
+            return false;
+        }
+        return true;
     }
 }

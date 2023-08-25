@@ -8,6 +8,7 @@ public class NewPlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private float moveSpeed = 8;
     [SerializeField] private float forceDamping = 1.2f;
+    [SerializeField] private PlayerInteraction _PlayerInteraction;
     private Vector2 forceToApply;
     private Vector2 PlayerInput;
     private bool _arePlayerControlsEnabled = true;
@@ -31,10 +32,12 @@ public class NewPlayerMovement : MonoBehaviour
         if (x != 0f)
         {
             PlayerInput.x = x;
+            _PlayerInteraction.SetInteractionOffset(x == -1 ? Utils.Direction.WEST : Utils.Direction.EAST);
         }
         else if (y != 0f)
         {
             PlayerInput.y = y;
+            _PlayerInteraction.SetInteractionOffset(y == -1 ? Utils.Direction.SOUTH : Utils.Direction.NORTH);
         }
     }
     private void FixedUpdate()
@@ -74,7 +77,7 @@ public class NewPlayerMovement : MonoBehaviour
             }
         }
 
-        transform.position = boxPosition + new Vector3(Utils.Directions[minDistanceIndex][0], Utils.Directions[minDistanceIndex][1], 0f) * boxScale;
+        transform.position = boxPosition + new Vector3(Utils.Directions[minDistanceIndex][0], Utils.Directions[minDistanceIndex][1], 0f) * boxScale / 2f;
         chosenDirection = (Utils.Direction)minDistanceIndex;
     }
     public void DisableMoveBox()

@@ -12,8 +12,11 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI _InteractionText;
 
+    [SerializeField]
+    private GameObject _DebugObj;
+
     private Vector2 _interactionOffset;
-    private readonly Vector2 _baseOffset = new(0, -0.1f);
+    private readonly Vector2 _baseOffset = new Vector2(0f, -0.125f);
     private IInteractable _focusedInteractable = null;
 
     private void Start()
@@ -59,6 +62,8 @@ public class PlayerInteraction : MonoBehaviour
         _interactionOffset.y = Utils.Directions[(int)direction][1] * 0.125f;
 
         _interactionOffset += _baseOffset;
+
+        _DebugObj.transform.localPosition = _interactionOffset;
     }
 }
 
