@@ -31,11 +31,10 @@ public class PlayerController : MonoBehaviour
 
     private void Move(Utils.Direction direction)
     {
-        Vector3 directionOffset = new Vector2(Utils.Directions[(int)direction][0], Utils.Directions[(int)direction][1]);
+        Vector3 directionOffset = new Vector2(Utils.Directions[(int)direction][0] * 0.25f, Utils.Directions[(int)direction][1] * 0.25f);
         if (movementCoroutine == null && CanMove(directionOffset))
         {
-            Vector3 targetCell = movementTilemap.WorldToCell(transform.position + directionOffset);
-            var targetPosition = targetCell + new Vector3(0.5f, 0.5f);
+            var targetPosition = transform.position + directionOffset;
             movementCoroutine = StartCoroutine(Movement(targetPosition));
         }
     }
