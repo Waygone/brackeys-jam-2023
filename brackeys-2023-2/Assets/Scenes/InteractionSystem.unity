@@ -391,7 +391,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Interact [E]
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -517,6 +517,7 @@ MonoBehaviour:
   _InteractionSize: {x: 0.2, y: 0.2}
   _Rigidbody2D: {fileID: 1530562251}
   _InteractionCanvas: {fileID: 2043841348}
+  _InteractionText: {fileID: 1079300801}
 --- !u!50 &1530562251
 Rigidbody2D:
   serializedVersion: 4

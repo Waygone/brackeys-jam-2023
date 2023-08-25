@@ -1,6 +1,6 @@
 public interface IInteractable
 {
-    void EnterInteract();
+    string EnterInteract();
     void ExitInteract();
     void ClickInteract();
 }

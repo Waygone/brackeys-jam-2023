@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
@@ -8,6 +9,8 @@ public class PlayerInteraction : MonoBehaviour
     private Rigidbody2D _Rigidbody2D;
     [SerializeField]
     private Canvas _InteractionCanvas;
+    [SerializeField]
+    private TextMeshProUGUI _InteractionText;
 
     private Vector2 _interactionOffset;
     private readonly Vector2 _baseOffset = new(0, -0.1f);
@@ -43,9 +46,10 @@ public class PlayerInteraction : MonoBehaviour
         {
             _focusedInteractable?.ExitInteract();
             _focusedInteractable = newInteractabe;
-            _focusedInteractable?.EnterInteract();
+            string text = _focusedInteractable?.EnterInteract();
 
             _InteractionCanvas.enabled = _focusedInteractable != null;
+            _InteractionText.text = text;
         }
     }
 

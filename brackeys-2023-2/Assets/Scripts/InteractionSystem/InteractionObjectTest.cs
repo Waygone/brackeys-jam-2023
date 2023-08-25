@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class InteractionObjectTest : MonoBehaviour, IInteractable
 {
-    public void EnterInteract()
+    public string EnterInteract()
     {
         Debug.Log(this + " enter focus");
+        return "Interact [E]";
     }
     public void ExitInteract()
     {
