@@ -49,13 +49,22 @@ public class NewPlayerMovement : MonoBehaviour
         rb.velocity = moveForce;
     }
 
-    public void EnableMoveBox(Vector2 boxPosition, Vector2 boxScale, out Utils.Direction chosenDirection)
+    public void EnableMoveBox(Vector2 boxPosition, Vector2 boxScale, BoxPuzzle.CanMove canMove, out Utils.Direction chosenDirection)
     {
         _arePlayerControlsEnabled = false;
         int minDistanceIndex = 0;
         float minDistance = float.MaxValue;
         for (int i = 0; i < Utils.Directions.Length; ++i)
         {
+            if ((i == 0 || i == 2) && canMove == BoxPuzzle.CanMove.LR)
+            {
+                continue;
+            }
+            if ((i == 1 || i == 3) && canMove == BoxPuzzle.CanMove.UD)
+            {
+                continue;
+            }
+
             Vector3 offset = boxPosition + new Vector3(Utils.Directions[i][0], Utils.Directions[i][1], 0f) * boxScale;
             float sqrDistance = (transform.position - offset).sqrMagnitude;
             if (sqrDistance < minDistance)

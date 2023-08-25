@@ -361,6 +361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _PlayerMovement: {fileID: 1699840127}
   _InteractionCanvas: {fileID: 1614744821}
+  _CanMove: 3
 --- !u!1 &449166141
 GameObject:
   m_ObjectHideFlags: 0

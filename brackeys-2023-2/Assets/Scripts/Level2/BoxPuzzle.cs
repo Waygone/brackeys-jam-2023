@@ -4,10 +4,20 @@ using UnityEngine;
 
 public class BoxPuzzle : MonoBehaviour, IInteractable
 {
+    public enum CanMove
+    {
+        NONE,
+        UD,
+        LR,
+        ALL,
+    }
+
     [SerializeField]
     private NewPlayerMovement _PlayerMovement;
     [SerializeField]
     private Canvas _InteractionCanvas;
+    [SerializeField]
+    private CanMove _CanMove;
 
     private Utils.Direction _playerDirection;
     private bool _isMoving = false;
@@ -31,6 +41,11 @@ public class BoxPuzzle : MonoBehaviour, IInteractable
         {
             case Utils.Direction.NORTH:
                 {
+                    if (_CanMove == CanMove.NONE || _CanMove == CanMove.LR)
+                    {
+                        break;
+                    }
+
                     float y = Input.GetAxisRaw("Vertical");
                     if (y == 1)
                     {
@@ -44,6 +59,11 @@ public class BoxPuzzle : MonoBehaviour, IInteractable
                 }
             case Utils.Direction.SOUTH:
                 {
+                    if (_CanMove == CanMove.NONE || _CanMove == CanMove.LR)
+                    {
+                        break;
+                    }
+
                     float y = Input.GetAxisRaw("Vertical");
                     if (y == 1)
                     {
@@ -57,6 +77,11 @@ public class BoxPuzzle : MonoBehaviour, IInteractable
                 }
             case Utils.Direction.EAST:
                 {
+                    if (_CanMove == CanMove.NONE || _CanMove == CanMove.UD)
+                    {
+                        break;
+                    }
+
                     float x = Input.GetAxisRaw("Horizontal");
                     if (x == 1)
                     {
@@ -70,6 +95,11 @@ public class BoxPuzzle : MonoBehaviour, IInteractable
                 }
             case Utils.Direction.WEST:
                 {
+                    if (_CanMove == CanMove.NONE || _CanMove == CanMove.UD)
+                    {
+                        break;
+                    }
+
                     float x = Input.GetAxisRaw("Horizontal");
                     if (x == 1)
                     {
@@ -116,6 +146,10 @@ public class BoxPuzzle : MonoBehaviour, IInteractable
 
     public string EnterInteract()
     {
+        if (_CanMove == CanMove.NONE)
+        {
+            return "";
+        }
         return "Interact [E]";
     }
     public void ExitInteract()
@@ -124,8 +158,13 @@ public class BoxPuzzle : MonoBehaviour, IInteractable
     }
     public void ClickInteract()
     {
+        if (_CanMove == CanMove.NONE)
+        {
+            return;
+        }
+
         _InteractionCanvas.enabled = true;
-        _PlayerMovement.EnableMoveBox(transform.position, transform.localScale, out _playerDirection);
+        _PlayerMovement.EnableMoveBox(transform.position, transform.localScale, _CanMove, out _playerDirection);
         _isControlled = true;
     }
 }
