@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Level1Manager : MonoBehaviour
 {
+    [SerializeField] private PlayerController playerController;
+
     private Dictionary<string, Level1Item> inventory = new Dictionary<string, Level1Item>();
 
     private BookDB bookDb;
@@ -30,6 +32,12 @@ public class Level1Manager : MonoBehaviour
         set => bookManager = value;
     }
 
+    public PlayerController PlayerController
+    {
+        get => playerController;
+        set => playerController = value;
+    }
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -47,6 +55,14 @@ public class Level1Manager : MonoBehaviour
         bookManager = GetComponent<BookManager>();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            dialogueManager.SkipPassage();
+        }
+    }
+
     public void AddToInventory(Level1Item item)
     {
         inventory.Add(item.itemId, item);
@@ -57,4 +73,3 @@ public class Level1Manager : MonoBehaviour
         return inventory.ContainsKey(itemId);
     }
 }
-

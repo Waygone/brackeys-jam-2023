@@ -4,7 +4,7 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Level1Interactable : MonoBehaviour
+public class Level1Interactable : MonoBehaviour, IInteractable
 {
     [SerializeField] private Level1ItemObject item;
 
@@ -29,7 +29,7 @@ public class Level1Interactable : MonoBehaviour
         bookDb = Level1Manager.Instance.BookDb;
     }
 
-    public void Interact()
+    public void ClickInteract()
     {
         var dialogueCon = dialogueChoice.LastOrDefault(x => x.ValidDialogue());
         var dialogueId = dialogueCon.dialogueId;
@@ -38,12 +38,9 @@ public class Level1Interactable : MonoBehaviour
         {
             if (dialogueManager.TrySetDialogue(dialogue))
             {
+                Level1Manager.Instance.PlayerController.TogglePlayerControls(false);
                 dialogueManager.PlayDialogue();
-
-                if (item != null)
-                {
-                    dialogueManager.OnDialogueEnd += DialogueEndHandler;
-                }
+                dialogueManager.OnDialogueEnd += DialogueEndHandler;
             }
         }
     }
@@ -51,21 +48,29 @@ public class Level1Interactable : MonoBehaviour
     private void DialogueEndHandler(Dialogue dialogue)
     {
         dialogueManager.OnDialogueEnd -= DialogueEndHandler;
-        var bookId = item.BookId;
-        if (!string.IsNullOrEmpty(bookId))
-        {
-            if (bookDb.TryGetDialogue(bookId, out Book book))
-            {
-                if (bookManager.TrySetBook(book))
-                {
-                    bookManager.OpenBook();
 
-                    bookManager.OnBookClose += BookCloseHandler;
+        if (item != null)
+        {
+            var bookId = item.BookId;
+            if (!string.IsNullOrEmpty(bookId))
+            {
+                if (bookDb.TryGetDialogue(bookId, out Book book))
+                {
+                    if (bookManager.TrySetBook(book))
+                    {
+                        bookManager.OpenBook();
+
+                        bookManager.OnBookClose += BookCloseHandler;
+                    }
                 }
+            }
+            else
+            {
+                PickupItem();
             }
         } else
         {
-            PickupItem();
+            ExitInteractable();
         }
     }
 
@@ -83,5 +88,22 @@ public class Level1Interactable : MonoBehaviour
         {
             Level1Manager.Instance.AddToInventory(item.ToItem());
         }
+
+        ExitInteractable();
+    }
+
+    private void ExitInteractable()
+    {
+        Level1Manager.Instance.PlayerController.TogglePlayerControls(true);
+    }
+
+    public string EnterInteract()
+    {
+        return "Interact [E]";
+    }
+
+    public void ExitInteract()
+    {
+        return;
     }
 }

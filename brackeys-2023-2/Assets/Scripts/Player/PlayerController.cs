@@ -15,6 +15,11 @@ public class PlayerController : MonoBehaviour
 
     private Coroutine movementCoroutine = null;
 
+    public void TogglePlayerControls(bool enabled)
+    {
+        _arePlayerControlsEnabled = enabled;
+    }
+
     private void Update()
     {
         if (!_arePlayerControlsEnabled)

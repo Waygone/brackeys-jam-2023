@@ -7,6 +7,7 @@ using UnityEngine.Playables;
 public class Level1Dolly : MonoBehaviour
 {
     [SerializeField] private CinemachineSmoothPath dollyPath;
+    [SerializeField] private Transform playerTransform;
 
     private CinemachineVirtualCamera dollyCam;
     private PlayableDirector dollyDirector;
@@ -17,7 +18,7 @@ public class Level1Dolly : MonoBehaviour
         dollyDirector = GetComponent<PlayableDirector>();
     }
 
-    private void Start()
+    public void PlayDolly()
     {
         dollyDirector.Play();
     }
