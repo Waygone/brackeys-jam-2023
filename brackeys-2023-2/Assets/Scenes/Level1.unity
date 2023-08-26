@@ -4598,7 +4598,7 @@ PrefabInstance:
       objectReference: {fileID: 1902759202}
     - target: {fileID: 3156894094244992793, guid: 5aa64c7fa27cbcb4ea8fede6dc6cd281, type: 3}
       propertyPath: playerMoveSpeed
-      value: 16
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3170057160256177958, guid: 5aa64c7fa27cbcb4ea8fede6dc6cd281, type: 3}
       propertyPath: m_Name
@@ -6931,6 +6931,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b9ae597ab79e4addac9a6078224f987, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _PageFlipAudioClip: {fileID: 0}
+  _AudioSource: {fileID: 0}
 --- !u!114 &1644147600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11253,7 +11255,7 @@ SpriteRenderer:
   m_Size: {x: 0.5, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &1925976010
