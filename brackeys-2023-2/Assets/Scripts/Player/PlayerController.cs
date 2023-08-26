@@ -13,7 +13,26 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerInteraction _PlayerInteraction;
     private bool _arePlayerControlsEnabled = true;
 
+    private Animator playerAnimator;
+
     private Coroutine movementCoroutine = null;
+
+    public bool ArePlayerControlsEnabled
+    {
+        get => _arePlayerControlsEnabled;
+        private set => _arePlayerControlsEnabled = value;
+    }
+
+    public void TogglePlayerControls(bool enabled)
+    {
+        playerAnimator.SetBool("Moving", false);
+        _arePlayerControlsEnabled = enabled;
+    }
+
+    private void Awake()
+    {
+        playerAnimator = GetComponent<Animator>();
+    }
 
     private void Update()
     {
@@ -23,6 +42,9 @@ public class PlayerController : MonoBehaviour
         }
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
+
+        if (x == 0 && y == 0)
+            playerAnimator.SetBool("Moving", false);
 
         if (x != 0f)
         {
@@ -40,6 +62,10 @@ public class PlayerController : MonoBehaviour
 
     private void Move(Utils.Direction direction)
     {
+        var animDir = new int[] { 0, 1, 2, 3 };
+
+        playerAnimator.SetFloat("Dir", animDir[(int)direction]);
+
         Vector3 directionOffset = new Vector2(Utils.Directions[(int)direction][0], Utils.Directions[(int)direction][1]) * (1f / 3f);
         if (movementCoroutine == null && CanMove(directionOffset))
         {
@@ -50,6 +76,7 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator Movement(Vector3 targetPosition)
     {
+        playerAnimator.SetBool("Moving", true);
         float t = 0f;
         Vector3 startPosition = transform.position;
         while (t < 1f)
@@ -73,6 +100,7 @@ public class PlayerController : MonoBehaviour
         Vector3Int gridPosMinus = colliderTilemap.WorldToCell(transform.position + directionOffset - new Vector3(canMoveOffset, canMoveOffset + 0.1f));
         if (colliderTilemap.HasTile(gridPosPlus) || colliderTilemap.HasTile(gridPosMinus) || !movementTilemap.HasTile(gridPos))
         {
+            playerAnimator.SetBool("Moving", false);
             return false;
         }
         return true;

@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9443c6262cdbb7746a6867360eefe6ea, type: 3}
+  m_Name: 2.ForbiddenBook
+  m_EditorClassIdentifier: 
+  questId: Level1_Book
+  questName: Forbidden Book
+  description: Forbidden Book
+  objectives:
+  - objectiveId: Forbidden1
+    description: Investigate the bang sound
+    trigger: Forbidden1
+    hintText: Perhaps a book has fell on the floor?
+    objComplete: 1
+  - objectiveId: Forbidden2
+    description: Find the other books
+    trigger: Forbidden2
+    hintText: The first book is bright red and stands out. The other two books probably
+      share the same design. I should look at the bookshelves.
+    objComplete: 1
+  - objectiveId: Forbidden3
+    description: Go back to the first volume and try to summon a ghost
+    trigger: Forbidden3
+    hintText: 
+    objComplete: 0
+  - objectiveId: Forbidden4
+    description: Investigate the wall
+    trigger: Forbidden4
+    hintText: The hidden entrance is at the back of the library, next to the third
+      bookshelf along.
+    objComplete: 0

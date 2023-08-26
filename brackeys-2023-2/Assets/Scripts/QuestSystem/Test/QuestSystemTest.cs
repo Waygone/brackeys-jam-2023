@@ -9,6 +9,7 @@ public class QuestSystemTest : MonoBehaviour
 
     private void Start()
     {
+        QuestManager.instance.QuestFinished.AddListener(QuestFinished);
         QuestManager.instance.BeginQuest(questToRun);
     }
 
@@ -33,5 +34,11 @@ public class QuestSystemTest : MonoBehaviour
         {
             QuestManager.instance.TriggerQuestObj("T");
         }
+    }
+
+    private void QuestFinished(string questId)
+    {
+        QuestManager.instance.BeginQuest(questToRun);
+        QuestManager.instance.QuestFinished.RemoveListener(QuestFinished);
     }
 }
