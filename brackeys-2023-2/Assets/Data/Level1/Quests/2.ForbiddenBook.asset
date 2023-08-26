@@ -26,9 +26,15 @@ MonoBehaviour:
     trigger: Forbidden2
     hintText: The first book is bright red and stands out. The other two books probably
       share the same design. I should look at the bookshelves.
-    objComplete: 0
+    objComplete: 1
   - objectiveId: Forbidden3
     description: Go back to the first volume and try to summon a ghost
     trigger: Forbidden3
     hintText: 
+    objComplete: 0
+  - objectiveId: Forbidden4
+    description: Investigate the wall
+    trigger: Forbidden4
+    hintText: The hidden entrance is at the back of the library, next to the third
+      bookshelf along.
     objComplete: 0

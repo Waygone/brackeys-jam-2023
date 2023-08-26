@@ -9,6 +9,7 @@ public class Level1Manager : MonoBehaviour
     [SerializeField] private Quest quest2;
     [SerializeField] private Level1Dolly level1Dolly;
     [SerializeField] private GameObject forbiddenBook;
+    [SerializeField] private GameObject ghost;
 
     private Dictionary<string, Level1Item> inventory = new Dictionary<string, Level1Item>();
 
@@ -129,7 +130,8 @@ public class Level1Manager : MonoBehaviour
         var hintText = QuestManager.instance.currentQuest.CurrentObjective.HintText;
         if (!string.IsNullOrEmpty(hintText))
         {
-            var hintDialogue = CreateNewDialogue("Librarian", hintText, 0.05f);
+            var speaker = ghost.activeSelf ? "Ghost" : "Librarian";
+            var hintDialogue = CreateNewDialogue(speaker, hintText, 0.05f);
 
             if (dialogueManager.TrySetDialogue(hintDialogue))
             {
@@ -189,6 +191,15 @@ public class Level1Manager : MonoBehaviour
             case "patron3":
                 StartCoroutine(Quest2());
                 break;
+            case "quest2_summoninghost":
+                StartCoroutine(Quest2_SummoningGhost());
+                break;
+            case "quest2_ghostsummoned":
+                QuestManager.instance.TriggerQuestObj("Forbidden3");
+                break;
+            case "quest2_hiddenstaircase":
+                LevelManager.Instance.TryAdvanceToNextLevel();
+                break;
         }
     }
 
@@ -240,5 +251,16 @@ public class Level1Manager : MonoBehaviour
         yield return new WaitForSeconds(12);
 
         QuestManager.instance.BeginQuest(quest2);
+    }
+
+    private IEnumerator Quest2_SummoningGhost()
+    {
+        playerController.TogglePlayerControls(false);
+
+        yield return new WaitForSeconds(2f);
+
+        ghost.SetActive(true);
+
+        PlayDialogue("quest2_ghostsummoned");
     }
 }
