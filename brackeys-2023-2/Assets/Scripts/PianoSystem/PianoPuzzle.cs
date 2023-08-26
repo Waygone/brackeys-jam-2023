@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PianoPuzzle : MonoBehaviour
@@ -14,6 +12,7 @@ public class PianoPuzzle : MonoBehaviour
     private PianoManager _PianoManager;
     [SerializeField]
     private string[] _Sequence;
+
 
     private int _currentSequenceIndex;
 

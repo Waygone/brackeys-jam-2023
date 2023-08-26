@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2aaa9407be56b214aa53d52efcee872b
+guid: 10d9100e3c84f43caa2d3279a2edc69d
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: walls
+  - name: piano-ui
     originalName: 
-    pivot: {x: 0.4878049, y: 0}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 164
-      height: 69
-    spriteID: abe85135d640c2a40b1415418710230f
+      width: 423
+      height: 224
+    spriteID: f5202395b92b44d189d176d014516154
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,23 +142,23 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -614402415
-    name: walls
+    guid: -1830175652
+    name: piano-ui
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: walls
+    - name: piano-ui
       frameIndex: 0
       cellRect:
         x: 0
         y: 0
-        width: 164
-        height: 69
-      spriteId: abe85135d640c2a40b1415418710230f
+        width: 423
+        height: 224
+      spriteId: f5202395b92b44d189d176d014516154
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 160, y: 64}
+  canvasSize: {x: 423, y: 224}
