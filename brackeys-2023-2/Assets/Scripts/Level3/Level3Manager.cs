@@ -27,7 +27,6 @@ public class Level3Manager : MonoBehaviour
 
     private void Start()
     {
-        _Level3Test.OnPickupItem += ItemPickupHandler;
         _PianoPuzzle.OnPianoPuzzleSolved += PianoPuzzleSolvedHandler;
     }
 
@@ -47,44 +46,19 @@ public class Level3Manager : MonoBehaviour
         OnLevel3StateChange?.Invoke(_state);
     }
 
-    // TODO: change this with the appropriate event and dont allow to
-    // pickup things not allowed in current stage.
-    private void ItemPickupHandler(string item)
+    public void SetFoundMusicSheet(int index)
     {
-        switch (item)
-        {
-            case "MusicSheet0":
-                {
-                    _hasFoundMusicSheets[0] = true;
-                    break;
-                }
-            case "MusicSheet1":
-                {
-                    _hasFoundMusicSheets[1] = true;
-                    break;
-                }
-            case "MusicSheet2":
-                {
-                    _hasFoundMusicSheets[2] = true;
-                    break;
-                }
-            case "DecipherBook":
-                {
-                    _hasFoundDecipherBook = true;
-                    break;
-                }
-            case "PianoKey0":
-                {
-                    _hasFoundPianoKeys[0] = true;
-                    break;
-                }
-            case "PianoKey1":
-                {
-                    _hasFoundPianoKeys[1] = true;
-                    break;
-                }
-        }
-
+        _hasFoundMusicSheets[index] = true;
+        UpdateState();
+    }
+    public void SetFoundDecipherBook()
+    {
+        _hasFoundDecipherBook = true;
+        UpdateState();
+    }
+    public void SetFoundPianoKeys(int index)
+    {
+        _hasFoundPianoKeys[index] = true;
         UpdateState();
     }
 
