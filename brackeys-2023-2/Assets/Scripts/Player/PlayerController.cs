@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float playerMoveSpeed = 1f;
 
     [SerializeField] private Tilemap colliderTilemap;
+    [SerializeField] private Tilemap movementTilemap;
 
     [SerializeField] private PlayerInteraction _PlayerInteraction;
     private bool _arePlayerControlsEnabled = true;
@@ -65,8 +66,12 @@ public class PlayerController : MonoBehaviour
 
     private bool CanMove(Vector3 directionOffset)
     {
+        var canMoveOffset = 0.1f;
+
         Vector3Int gridPos = colliderTilemap.WorldToCell(transform.position + directionOffset);
-        if (colliderTilemap.HasTile(gridPos))
+        Vector3Int gridPosPlus = colliderTilemap.WorldToCell(transform.position + directionOffset + new Vector3(canMoveOffset, canMoveOffset));
+        Vector3Int gridPosMinus = colliderTilemap.WorldToCell(transform.position + directionOffset - new Vector3(canMoveOffset, canMoveOffset + 0.1f));
+        if (colliderTilemap.HasTile(gridPosPlus) || colliderTilemap.HasTile(gridPosMinus) || !movementTilemap.HasTile(gridPos))
         {
             return false;
         }
