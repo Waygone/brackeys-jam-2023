@@ -6,14 +6,12 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField]
     private Vector2 _InteractionSize;
     [SerializeField]
-    private Rigidbody2D _Rigidbody2D;
-    [SerializeField]
     private Canvas _InteractionCanvas;
     [SerializeField]
     private TextMeshProUGUI _InteractionText;
 
     private Vector2 _interactionOffset;
-    private readonly Vector2 _baseOffset = new(0, -0.1f);
+    private readonly Vector2 _baseOffset = new Vector2(0f, -0.125f);
     private IInteractable _focusedInteractable = null;
 
     private void Start()
@@ -31,7 +29,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Collider2D[] colliders = Physics2D.OverlapBoxAll(_Rigidbody2D.position + _interactionOffset, _InteractionSize, 0f);
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(new Vector2(transform.position.x, transform.position.y) + _interactionOffset, _InteractionSize, 0f);
         IInteractable newInteractabe = null;
         for (int i = 0; i < colliders.Length; ++i)
         {
