@@ -9,6 +9,8 @@ public struct DialogueChoice
     public string questId;
     public string objectiveId;
 
+    public bool completeObjective;
+
     public bool ValidDialogue()
     {
         return CorrectQuest() && CorrectObjective();

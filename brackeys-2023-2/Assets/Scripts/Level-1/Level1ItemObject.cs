@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "Level1Item", menuName = "ScriptableObjects/Level1Item")]
 public class Level1ItemObject : ScriptableObject
 {
     [SerializeField] private string itemId;

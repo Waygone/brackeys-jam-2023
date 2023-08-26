@@ -8,39 +8,39 @@ public class Level1Interactable : MonoBehaviour, IInteractable
 {
     [SerializeField] private Level1ItemObject item;
 
-    private DialogueManager dialogueManager; // need to get somehow
-    private BookManager bookManager; // Need to get somehow
-    private BookDB bookDb;
-
     [Tooltip("Which dialogue will display when interacting with the interactable during which quest/objective")]
     [SerializeField] private DialogueChoice[] dialogueChoice;
 
+    private DialogueManager dialogueManager; // need to get somehow
+    private BookManager bookManager; // Need to get somehow
+    private BookDB bookDb;
     private DialogueDB dialogueDb;
 
-    private void Awake()
-    {
-        dialogueDb = GetComponent<DialogueDB>();
-    }
+    private DialogueChoice curDialogueChoice;
 
     private void Start()
     {
         dialogueManager = Level1Manager.Instance.DialogueManager;
         bookManager = Level1Manager.Instance.BookManager;
         bookDb = Level1Manager.Instance.BookDb;
+        dialogueDb = Level1Manager.Instance.DialogueDb;
     }
 
     public void ClickInteract()
     {
-        var dialogueCon = dialogueChoice.LastOrDefault(x => x.ValidDialogue());
-        var dialogueId = dialogueCon.dialogueId;
+        curDialogueChoice = dialogueChoice.LastOrDefault(x => x.ValidDialogue());
+        var dialogueId = curDialogueChoice.dialogueId;
 
-        if (dialogueDb.TryGetDialogue(dialogueId, out Dialogue dialogue))
+        if (!string.IsNullOrEmpty(dialogueId))
         {
-            if (dialogueManager.TrySetDialogue(dialogue))
+            if (dialogueDb.TryGetDialogue(dialogueId, out Dialogue dialogue))
             {
-                Level1Manager.Instance.PlayerController.TogglePlayerControls(false);
-                dialogueManager.PlayDialogue();
-                dialogueManager.OnDialogueEnd += DialogueEndHandler;
+                if (dialogueManager.TrySetDialogue(dialogue))
+                {
+                    Level1Manager.Instance.PlayerController.TogglePlayerControls(false);
+                    dialogueManager.PlayDialogue();
+                    dialogueManager.OnDialogueEnd += DialogueEndHandler;
+                }
             }
         }
     }
@@ -94,11 +94,24 @@ public class Level1Interactable : MonoBehaviour, IInteractable
 
     private void ExitInteractable()
     {
+        if (!string.IsNullOrEmpty(curDialogueChoice.objectiveId) && curDialogueChoice.completeObjective)
+            QuestManager.instance.TriggerQuestObj(curDialogueChoice.objectiveId);
+
         Level1Manager.Instance.PlayerController.TogglePlayerControls(true);
     }
 
     public string EnterInteract()
     {
+        var validDialogue = false;
+        foreach (DialogueChoice choice in dialogueChoice)
+        {
+            if (choice.ValidDialogue())
+                validDialogue = true;
+        }
+        if (!validDialogue)
+        {
+            return "test";
+        }
         return "Interact [E]";
     }
 
