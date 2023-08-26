@@ -111,4 +111,13 @@ public class PlayerController : MonoBehaviour
         transform.position = boxPosition + (new Vector3(Utils.Directions[(int)direction][0], Utils.Directions[(int)direction][1], 0f) * 0.5f) + new Vector3(Utils.Directions[(int)direction][0], Utils.Directions[(int)direction][1]) * (1f / 6f);
         _arePlayerControlsEnabled = true;
     }
+
+    public void EnableMovement()
+    {
+        _arePlayerControlsEnabled = true;
+    }
+    public void DisableMovement()
+    {
+        _arePlayerControlsEnabled = false;
+    }
 }
