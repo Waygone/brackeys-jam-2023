@@ -10,6 +10,7 @@ public struct DialogueChoice
     public string objectiveId;
 
     public bool completeObjective;
+    public bool pickUpItem;
 
     public bool ValidDialogue()
     {

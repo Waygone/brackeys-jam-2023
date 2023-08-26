@@ -7,6 +7,8 @@ public class Level1Manager : MonoBehaviour
     [SerializeField] private PlayerController playerController;
     [SerializeField] private Quest quest1;
     [SerializeField] private Quest quest2;
+    [SerializeField] private Level1Dolly level1Dolly;
+    [SerializeField] private GameObject forbiddenBook;
 
     private Dictionary<string, Level1Item> inventory = new Dictionary<string, Level1Item>();
 
@@ -69,11 +71,13 @@ public class Level1Manager : MonoBehaviour
     {
         dialogueManager.OnDialogueEnd += DialogueEndHandler;
         dialogueManager.OnDialogueBegin += DialogueBeginHandler;
+        bookManager.OnBookOpen += BookOpenHandler;
+        bookManager.OnBookClose += BookCloseHandler;
 
         StartCoroutine(Quest1Opening());
     }
 
-    private void Update()
+        private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
@@ -84,11 +88,35 @@ public class Level1Manager : MonoBehaviour
         {
             GetHint();
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            bookManager.CloseBook();
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            bookManager.TryFlipPage(BookManager.FlipDirection.LEFT);
+        }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            bookManager.TryFlipPage(BookManager.FlipDirection.RIGHT);
+        }
     }
 
     public void AddToInventory(Level1Item item)
     {
         inventory.Add(item.itemId, item);
+
+        Debug.Log("Picked up");
+        if (QuestManager.instance.currentQuest.QuestId == "Level1_Book")
+        {
+            if (inventory.ContainsKey("forbidden2") && inventory.ContainsKey("forbidden3"))
+            {
+                PlayDialogue("quest2_foundbooks");
+                QuestManager.instance.TriggerQuestObj("Forbidden2");
+            }
+        }
     }
 
     public bool IsItemInInventory(string itemId)
@@ -127,14 +155,24 @@ public class Level1Manager : MonoBehaviour
         playerController.TogglePlayerControls(false);
     }
 
+    private void BookOpenHandler(Book book)
+    {
+        playerController.TogglePlayerControls(false);
+    }
+
+    private void PlayDialogue(string dialogueId)
+    {
+        if (dialogueManager.TrySetDialogue(dialogueDb.GetDialogue(dialogueId)))
+        {
+            dialogueManager.PlayDialogue();
+        }
+    }
+
     private IEnumerator Quest1Opening()
     {
         yield return new WaitForSeconds(1);
 
-        if (dialogueManager.TrySetDialogue(dialogueDb.GetDialogue("quest1_start")))
-        {
-            dialogueManager.PlayDialogue();
-        }
+        PlayDialogue("quest1_start");
     }
 
     private void DialogueEndHandler(Dialogue dialogue)
@@ -154,6 +192,18 @@ public class Level1Manager : MonoBehaviour
         }
     }
 
+    private void BookCloseHandler(Book book)
+    {
+        playerController.TogglePlayerControls(true);
+        switch (book.Id)
+        {
+            case "forbiddenbook1":
+                Debug.Log("You are here");
+                PlayDialogue("quest2_gofind");
+                break;
+        }
+    }
+
     private IEnumerator Quest1GoFindBook()
     {
         yield return new WaitForSeconds(3f);
@@ -163,10 +213,7 @@ public class Level1Manager : MonoBehaviour
             yield return null;
         }
 
-        if (dialogueManager.TrySetDialogue(dialogueDb.GetDialogue("quest1_help")))
-        {
-            dialogueManager.PlayDialogue();
-        }
+        PlayDialogue("quest1_help");
     }
 
     private IEnumerator Quest2()
@@ -175,10 +222,23 @@ public class Level1Manager : MonoBehaviour
 
         QuestManager.instance.TriggerQuestObj("Patron4");
 
+        playerController.TogglePlayerControls(false);
+
         // Play sound here.
 
+        forbiddenBook.SetActive(true);
 
+        yield return new WaitForSeconds(1);
 
-        yield return null;
+        level1Dolly.PlayDolly();
+
+        if (dialogueManager.TrySetDialogue(dialogueDb.GetDialogue("quest2_start")))
+        {
+            dialogueManager.PlayDialogue();
+        }
+
+        yield return new WaitForSeconds(12);
+
+        QuestManager.instance.BeginQuest(quest2);
     }
 }

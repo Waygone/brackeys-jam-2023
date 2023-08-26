@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9eb9d62e8bd454ca6bbac80b15651001, type: 3}
-  m_Name: Quest1_Case_Right
+  m_Name: Quest2_GoFind
   m_EditorClassIdentifier: 
-  Id: quest1_case_right
+  Id: quest2_gofind
   DialoguePassages:
   - Title: Librarian
-    Message: There's the book he wants!
+    Message: How to summon a ghost?
     SecondsPerCharacter: 0.05
   - Title: Librarian
-    Message: I miss this book series... I should re-read it one time.
+    Message: This... this can't be real. No harm following along, could be fun!
     SecondsPerCharacter: 0.05
-  - Title: TUTORIAL
-    Message: Press the W and A keys to flip book pages left and right. Press ESC
-      to stop reading a book.
-    SecondsPerCharacter: 0.01
+  - Title: Librarian
+    Message: Looks like there are two more volumes with the other steps. I should
+      try to find them... hmm, what is identifiable about this book...
+    SecondsPerCharacter: 0.05

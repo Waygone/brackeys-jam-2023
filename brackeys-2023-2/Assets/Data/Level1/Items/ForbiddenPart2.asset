@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5837a66f4d6c89049b77809fd99b784e, type: 3}
-  m_Name: TheLostSeaBook
+  m_Name: ForbiddenPart2
   m_EditorClassIdentifier: 
-  itemId: lostsea
-  itemName: The Lost Sea Zrum Latrin
-  bookId: thelostsea
+  itemId: forbidden2
+  itemName: Forbidden Part 2
+  bookId: forbiddenbook2

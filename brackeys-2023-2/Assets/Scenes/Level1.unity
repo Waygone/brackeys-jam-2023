@@ -295,12 +295,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4c856379fefd74bb7bc77ff2867393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ccc43c0083bae51499e6749ca4eaf82a, type: 2}
+  item: {fileID: 0}
   dialogueChoice:
   - dialogueId: quest1_case_wrong
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 0
+    pickUpItem: 0
+  - dialogueId: quest2_case_wrong
+    questId: Level2_Book
+    objectiveId: Forbidden2
+    completeObjective: 0
+    pickUpItem: 0
 --- !u!212 &71406761
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -546,12 +552,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4c856379fefd74bb7bc77ff2867393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ccc43c0083bae51499e6749ca4eaf82a, type: 2}
+  item: {fileID: 11400000, guid: 96bfdf28a2e0a8142b2a1d17f8cfa2b1, type: 2}
   dialogueChoice:
   - dialogueId: quest1_case_wrong
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 0
+    pickUpItem: 0
+  - dialogueId: quest1_case_right
+    questId: Level2_Book
+    objectiveId: Forbidden2
+    completeObjective: 0
+    pickUpItem: 1
 --- !u!212 &155685660
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -797,12 +809,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4c856379fefd74bb7bc77ff2867393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ccc43c0083bae51499e6749ca4eaf82a, type: 2}
+  item: {fileID: 0}
   dialogueChoice:
   - dialogueId: quest1_case_wrong
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 0
+    pickUpItem: 0
+  - dialogueId: quest2_case_wrong
+    questId: Level2_Book
+    objectiveId: Forbidden2
+    completeObjective: 0
+    pickUpItem: 0
 --- !u!212 &213213728
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1173,12 +1191,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4c856379fefd74bb7bc77ff2867393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ccc43c0083bae51499e6749ca4eaf82a, type: 2}
+  item: {fileID: 0}
   dialogueChoice:
   - dialogueId: quest1_case_wrong
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 0
+    pickUpItem: 0
+  - dialogueId: quest2_case_wrong
+    questId: Level2_Book
+    objectiveId: Forbidden2
+    completeObjective: 0
+    pickUpItem: 0
 --- !u!212 &483143122
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1322,12 +1346,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4c856379fefd74bb7bc77ff2867393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ccc43c0083bae51499e6749ca4eaf82a, type: 2}
+  item: {fileID: 0}
   dialogueChoice:
   - dialogueId: quest1_case_wrong
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 0
+    pickUpItem: 0
+  - dialogueId: quest2_case_wrong
+    questId: Level2_Book
+    objectiveId: Forbidden2
+    completeObjective: 0
+    pickUpItem: 0
 --- !u!212 &500301642
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1471,12 +1501,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4c856379fefd74bb7bc77ff2867393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ccc43c0083bae51499e6749ca4eaf82a, type: 2}
+  item: {fileID: 0}
   dialogueChoice:
   - dialogueId: quest1_case_wrong
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 0
+    pickUpItem: 0
+  - dialogueId: quest2_case_wrong
+    questId: Level2_Book
+    objectiveId: Forbidden2
+    completeObjective: 0
+    pickUpItem: 0
 --- !u!212 &547996609
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1620,12 +1656,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4c856379fefd74bb7bc77ff2867393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ccc43c0083bae51499e6749ca4eaf82a, type: 2}
+  item: {fileID: 0}
   dialogueChoice:
   - dialogueId: quest1_case_wrong
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 0
+    pickUpItem: 0
+  - dialogueId: quest2_case_wrong
+    questId: Level2_Book
+    objectiveId: Forbidden2
+    completeObjective: 0
+    pickUpItem: 0
 --- !u!212 &555379037
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1769,12 +1811,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4c856379fefd74bb7bc77ff2867393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ccc43c0083bae51499e6749ca4eaf82a, type: 2}
+  item: {fileID: 0}
   dialogueChoice:
   - dialogueId: quest1_case_wrong
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 0
+    pickUpItem: 0
+  - dialogueId: quest2_case_wrong
+    questId: Level2_Book
+    objectiveId: Forbidden2
+    completeObjective: 0
+    pickUpItem: 0
 --- !u!212 &599836636
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1918,12 +1966,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4c856379fefd74bb7bc77ff2867393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ccc43c0083bae51499e6749ca4eaf82a, type: 2}
+  item: {fileID: 0}
   dialogueChoice:
   - dialogueId: quest1_case_wrong
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 0
+    pickUpItem: 0
+  - dialogueId: quest2_case_wrong
+    questId: Level2_Book
+    objectiveId: Forbidden2
+    completeObjective: 0
+    pickUpItem: 0
 --- !u!212 &646816241
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2067,12 +2121,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4c856379fefd74bb7bc77ff2867393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ccc43c0083bae51499e6749ca4eaf82a, type: 2}
+  item: {fileID: 0}
   dialogueChoice:
   - dialogueId: quest1_case_wrong
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 0
+    pickUpItem: 0
+  - dialogueId: quest2_case_wrong
+    questId: Level2_Book
+    objectiveId: Forbidden2
+    completeObjective: 0
+    pickUpItem: 0
 --- !u!212 &666829529
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2125,6 +2185,167 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &745381195
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1109782755}
+    m_Modifications:
+    - target: {fileID: 554940011789604634, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047093581734943103, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047093581734943103, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177716314392766926, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_Name
+      value: Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3684450048545182767, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258480244875212488, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211954562747678584, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211954562747678584, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211954562747678584, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211954562747678584, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211954562747678584, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211954562747678584, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211954562747678584, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211954562747678584, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211954562747678584, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211954562747678584, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211954562747678584, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211954562747678584, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211954562747678584, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211954562747678584, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211954562747678584, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211954562747678584, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211954562747678584, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211954562747678584, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211954562747678584, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211954562747678584, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671841156489226380, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9071758964859379348, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_text
+      value: '
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9071758964859379348, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 9071758964859379348, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9071758964859379348, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 9071758964859379348, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 5804174765242797461, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+    - {fileID: 3715831321897955533, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+--- !u!224 &745381196 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5211954562747678584, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+  m_PrefabInstance: {fileID: 745381195}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &745381197 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9071758964859379348, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+  m_PrefabInstance: {fileID: 745381195}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &836814867
 GameObject:
   m_ObjectHideFlags: 0
@@ -2157,6 +2378,7 @@ Transform:
   - {fileID: 133195992}
   - {fileID: 166917592}
   - {fileID: 1258129901}
+  - {fileID: 1109782755}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &850461172
@@ -2250,12 +2472,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4c856379fefd74bb7bc77ff2867393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ccc43c0083bae51499e6749ca4eaf82a, type: 2}
+  item: {fileID: 0}
   dialogueChoice:
   - dialogueId: quest1_case_wrong
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 0
+    pickUpItem: 0
+  - dialogueId: quest2_case_wrong
+    questId: Level2_Book
+    objectiveId: Forbidden2
+    completeObjective: 0
+    pickUpItem: 0
 --- !u!212 &850461176
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2339,6 +2567,7 @@ Transform:
   m_Children:
   - {fileID: 1528954569}
   - {fileID: 1021268047}
+  - {fileID: 1925976008}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &926142107
@@ -2432,12 +2661,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4c856379fefd74bb7bc77ff2867393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ccc43c0083bae51499e6749ca4eaf82a, type: 2}
+  item: {fileID: 0}
   dialogueChoice:
   - dialogueId: quest1_case_wrong
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 0
+    pickUpItem: 0
+  - dialogueId: quest2_case_wrong
+    questId: Level2_Book
+    objectiveId: Forbidden2
+    completeObjective: 0
+    pickUpItem: 0
 --- !u!212 &926142111
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3421,8 +3656,8 @@ Tilemap:
   - first: {x: -12, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 14
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3431,8 +3666,8 @@ Tilemap:
   - first: {x: -11, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 14
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3441,8 +3676,8 @@ Tilemap:
   - first: {x: -10, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileIndex: 6
+      m_TileSpriteIndex: 10
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3451,8 +3686,8 @@ Tilemap:
   - first: {x: -9, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 14
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3461,8 +3696,8 @@ Tilemap:
   - first: {x: -8, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 14
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3471,8 +3706,8 @@ Tilemap:
   - first: {x: -7, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 14
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3481,8 +3716,8 @@ Tilemap:
   - first: {x: -6, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileIndex: 6
+      m_TileSpriteIndex: 10
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3491,8 +3726,8 @@ Tilemap:
   - first: {x: -5, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 14
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3501,8 +3736,8 @@ Tilemap:
   - first: {x: -4, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 14
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3511,8 +3746,8 @@ Tilemap:
   - first: {x: -3, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 14
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3521,8 +3756,8 @@ Tilemap:
   - first: {x: -2, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 14
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3531,8 +3766,8 @@ Tilemap:
   - first: {x: -1, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 14
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3541,8 +3776,8 @@ Tilemap:
   - first: {x: 0, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 14
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3551,8 +3786,8 @@ Tilemap:
   - first: {x: 1, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 14
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3561,8 +3796,8 @@ Tilemap:
   - first: {x: 2, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 14
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3571,8 +3806,8 @@ Tilemap:
   - first: {x: 3, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 14
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3581,8 +3816,8 @@ Tilemap:
   - first: {x: 4, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 14
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3591,8 +3826,8 @@ Tilemap:
   - first: {x: 5, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 14
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3601,8 +3836,8 @@ Tilemap:
   - first: {x: 6, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 14
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3611,8 +3846,8 @@ Tilemap:
   - first: {x: 7, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 14
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3621,8 +3856,8 @@ Tilemap:
   - first: {x: 8, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 14
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3631,8 +3866,8 @@ Tilemap:
   - first: {x: 9, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 14
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3641,8 +3876,8 @@ Tilemap:
   - first: {x: 10, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 14
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3651,8 +3886,8 @@ Tilemap:
   - first: {x: 11, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 14
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3661,8 +3896,8 @@ Tilemap:
   - first: {x: 12, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 14
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3924,16 +4159,16 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 9e8158236cedada4482e66d923dec98d, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 3146884f4dc136b4e90d7fb68c05f982, type: 2}
-  - m_RefCount: 2
-    m_Data: {fileID: 11400000, guid: 122fd7bc68922f843bce3685d5bc8db2, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 25
     m_Data: {fileID: 11400000, guid: 5d8ee00d19b95234ab26bca25e60c3e7, type: 2}
   - m_RefCount: 25
     m_Data: {fileID: 11400000, guid: 3b409922d0ec23c47a7a47a640c749e5, type: 2}
   - m_RefCount: 23
     m_Data: {fileID: 11400000, guid: 4582d207894a6824f8b0a5224aa5fb61, type: 2}
-  - m_RefCount: 23
-    m_Data: {fileID: 11400000, guid: eb28e4dbeb53cdc4a856fb3fbc4fc813, type: 2}
+  - m_RefCount: 2
+    m_Data: {fileID: 11400000, guid: c14e1450471d0d841b9fcbf2da43f8c4, type: 2}
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 4b55215fbc1029b44ae2b54d0104f931, type: 2}
   - m_RefCount: 6
@@ -3948,27 +4183,31 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: d025c41592ec6054bbf669390589df50, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: f68cbed18f417d64882302d5d34607af, type: 2}
+  - m_RefCount: 23
+    m_Data: {fileID: 11400000, guid: d5ba183fa90d7264f9aa52b1a9b75548, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 12
     m_Data: {fileID: 1319791786, guid: 26a34c96701610348876c1ae9ce5c566, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -1504697659, guid: 757317c404ebd434680bea1fba67f069, type: 3}
-  - m_RefCount: 2
-    m_Data: {fileID: 1068436987, guid: 757317c404ebd434680bea1fba67f069, type: 3}
+  - m_RefCount: 23
+    m_Data: {fileID: 1790833270, guid: 757317c404ebd434680bea1fba67f069, type: 3}
   - m_RefCount: 25
     m_Data: {fileID: -882252928, guid: 26a34c96701610348876c1ae9ce5c566, type: 3}
   - m_RefCount: 25
     m_Data: {fileID: -882506509, guid: 26a34c96701610348876c1ae9ce5c566, type: 3}
   - m_RefCount: 23
     m_Data: {fileID: -1006531964, guid: 757317c404ebd434680bea1fba67f069, type: 3}
-  - m_RefCount: 23
-    m_Data: {fileID: 2146483238, guid: 757317c404ebd434680bea1fba67f069, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 5
     m_Data: {fileID: 1301973083, guid: 26a34c96701610348876c1ae9ce5c566, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: -760463873, guid: 26a34c96701610348876c1ae9ce5c566, type: 3}
   - m_RefCount: 8
     m_Data: {fileID: 422278649, guid: 26a34c96701610348876c1ae9ce5c566, type: 3}
+  - m_RefCount: 2
+    m_Data: {fileID: 1390484968, guid: 757317c404ebd434680bea1fba67f069, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 115
     m_Data:
@@ -4046,9 +4285,9 @@ Tilemap:
   - m_RefCount: 130
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 0
-    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
+    m_Data: {r: 4.1462e-41, g: 4.1462e-41, b: 4.1462e-41, a: 4.1462e-41}
   - m_RefCount: 0
-    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
+    m_Data: {r: 4.1462e-41, g: 4.1462e-41, b: 4.1462e-41, a: 4.1462e-41}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4164,12 +4403,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4c856379fefd74bb7bc77ff2867393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ccc43c0083bae51499e6749ca4eaf82a, type: 2}
+  item: {fileID: 0}
   dialogueChoice:
   - dialogueId: quest1_case_wrong
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 0
+    pickUpItem: 0
+  - dialogueId: quest2_case_wrong
+    questId: Level2_Book
+    objectiveId: Forbidden2
+    completeObjective: 0
+    pickUpItem: 0
 --- !u!212 &994970061
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4350,6 +4595,10 @@ PrefabInstance:
       propertyPath: movementTilemap
       value: 
       objectReference: {fileID: 1902759202}
+    - target: {fileID: 3156894094244992793, guid: 5aa64c7fa27cbcb4ea8fede6dc6cd281, type: 3}
+      propertyPath: playerMoveSpeed
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 3170057160256177958, guid: 5aa64c7fa27cbcb4ea8fede6dc6cd281, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4374,6 +4623,108 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1790365946}
   m_SourcePrefab: {fileID: 100100000, guid: 5aa64c7fa27cbcb4ea8fede6dc6cd281, type: 3}
+--- !u!1 &1109782754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1109782755}
+  - component: {fileID: 1109782758}
+  - component: {fileID: 1109782757}
+  - component: {fileID: 1109782756}
+  m_Layer: 5
+  m_Name: BookCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1109782755
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109782754}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 745381196}
+  m_Father: {fileID: 836814868}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1109782756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109782754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1109782757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109782754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1109782758
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109782754}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &1178341440
 GameObject:
   m_ObjectHideFlags: 0
@@ -5121,12 +5472,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4c856379fefd74bb7bc77ff2867393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ccc43c0083bae51499e6749ca4eaf82a, type: 2}
+  item: {fileID: 0}
   dialogueChoice:
   - dialogueId: quest1_case_wrong
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 0
+    pickUpItem: 0
+  - dialogueId: quest2_case_wrong
+    questId: Level2_Book
+    objectiveId: Forbidden2
+    completeObjective: 0
+    pickUpItem: 0
 --- !u!212 &1199323314
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5338,12 +5695,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4c856379fefd74bb7bc77ff2867393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ccc43c0083bae51499e6749ca4eaf82a, type: 2}
+  item: {fileID: 0}
   dialogueChoice:
   - dialogueId: quest1_case_wrong
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 0
+    pickUpItem: 0
+  - dialogueId: quest2_case_wrong
+    questId: Level2_Book
+    objectiveId: Forbidden2
+    completeObjective: 0
+    pickUpItem: 0
 --- !u!212 &1320918238
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5529,8 +5892,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e8aca8e117d2a545802391547eeead7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dollyPath: {fileID: 293062242}
-  playerTransform: {fileID: 1790365945}
 --- !u!114 &1346397126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5617,6 +5978,12 @@ MonoBehaviour:
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 1
+    pickUpItem: 1
+  - dialogueId: quest2_case_wrong
+    questId: Level2_Book
+    objectiveId: Forbidden2
+    completeObjective: 0
+    pickUpItem: 0
 --- !u!212 &1444456658
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5805,12 +6172,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4c856379fefd74bb7bc77ff2867393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ccc43c0083bae51499e6749ca4eaf82a, type: 2}
+  item: {fileID: 0}
   dialogueChoice:
   - dialogueId: quest1_case_wrong
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 0
+    pickUpItem: 0
+  - dialogueId: quest2_case_wrong
+    questId: Level2_Book
+    objectiveId: Forbidden2
+    completeObjective: 0
+    pickUpItem: 0
 --- !u!212 &1516303886
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5997,14 +6370,17 @@ MonoBehaviour:
     questId: Level1_Patron
     objectiveId: Patron1
     completeObjective: 1
+    pickUpItem: 0
   - dialogueId: patron2
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 0
+    pickUpItem: 0
   - dialogueId: patron3
     questId: Level1_Patron
     objectiveId: Patron3
     completeObjective: 1
+    pickUpItem: 0
 --- !u!61 &1528954573
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6353,6 +6729,7 @@ GameObject:
   - component: {fileID: 1644147599}
   - component: {fileID: 1644147598}
   - component: {fileID: 1644147597}
+  - component: {fileID: 1644147605}
   - component: {fileID: 1644147602}
   - component: {fileID: 1644147603}
   - component: {fileID: 1644147604}
@@ -6418,6 +6795,8 @@ MonoBehaviour:
   playerController: {fileID: 1790365942}
   quest1: {fileID: 11400000, guid: 42c504d97ddb2914c9cff366bad604b4, type: 2}
   quest2: {fileID: 11400000, guid: 8f677965f3bd1894aa60fc7fda1f3cbd, type: 2}
+  level1Dolly: {fileID: 1346397125}
+  forbiddenBook: {fileID: 1925976007}
 --- !u!4 &1644147601
 Transform:
   m_ObjectHideFlags: 0
@@ -6467,7 +6846,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f3a8f20c386a40aba74b4e0facc05dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Books: []
+  _Books:
+  - {fileID: 11400000, guid: 4d09e5bf0969c024eaaa264e881b6847, type: 2}
+  - {fileID: 11400000, guid: 78b9c670968eae3438e0234292c54f5d, type: 2}
+  - {fileID: 11400000, guid: 77d4f071cc093554da14c4a9a32aea7c, type: 2}
+  - {fileID: 11400000, guid: d7a1d77792b74e04494555eb9f97b4bf, type: 2}
 --- !u!114 &1644147604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6488,6 +6871,28 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6e9262b0759008149b63a8cf8f66ccd0, type: 2}
   - {fileID: 11400000, guid: 6cead83ca91f37d48a2440765050dc51, type: 2}
   - {fileID: 11400000, guid: 254de5b93099fbb438490b6de86abcc7, type: 2}
+  - {fileID: 11400000, guid: 67d689f4112a370479d10b2444b3bd49, type: 2}
+  - {fileID: 11400000, guid: 15c246d4d7ca4084dbcc98354b02e035, type: 2}
+  - {fileID: 11400000, guid: c6c7c1ee7258ef441a1321224314f480, type: 2}
+  - {fileID: 11400000, guid: 190858718735588468512b379238864f, type: 2}
+  - {fileID: 11400000, guid: 9a1eea37b5342f84aac476053ee77969, type: 2}
+  - {fileID: 11400000, guid: 8259525f77ef478459292b99bd75dbb0, type: 2}
+--- !u!114 &1644147605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644147596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f8eee7fc6f394439841bbb2a43a67b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _BookManager: {fileID: 1644147599}
+  _BookCanvas: {fileID: 1109782758}
+  _Pages:
+  - {fileID: 745381197}
 --- !u!1 &1656064251
 GameObject:
   m_ObjectHideFlags: 3
@@ -6667,12 +7072,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4c856379fefd74bb7bc77ff2867393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ccc43c0083bae51499e6749ca4eaf82a, type: 2}
+  item: {fileID: 0}
   dialogueChoice:
   - dialogueId: quest1_case_wrong
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 0
+    pickUpItem: 0
+  - dialogueId: quest2_case_wrong
+    questId: Level2_Book
+    objectiveId: Forbidden2
+    completeObjective: 0
+    pickUpItem: 0
 --- !u!212 &1683557685
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7083,12 +7494,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4c856379fefd74bb7bc77ff2867393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ccc43c0083bae51499e6749ca4eaf82a, type: 2}
+  item: {fileID: 0}
   dialogueChoice:
   - dialogueId: quest1_case_wrong
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 0
+    pickUpItem: 0
+  - dialogueId: quest2_case_wrong
+    questId: Level2_Book
+    objectiveId: Forbidden2
+    completeObjective: 0
+    pickUpItem: 0
 --- !u!212 &1825889160
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7232,12 +7649,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4c856379fefd74bb7bc77ff2867393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ccc43c0083bae51499e6749ca4eaf82a, type: 2}
+  item: {fileID: 0}
   dialogueChoice:
   - dialogueId: quest1_case_wrong
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 0
+    pickUpItem: 0
+  - dialogueId: quest2_case_wrong
+    questId: Level2_Book
+    objectiveId: Forbidden2
+    completeObjective: 0
+    pickUpItem: 0
 --- !u!212 &1827948462
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10527,12 +10950,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4c856379fefd74bb7bc77ff2867393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ccc43c0083bae51499e6749ca4eaf82a, type: 2}
+  item: {fileID: 0}
   dialogueChoice:
   - dialogueId: quest1_case_wrong
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 0
+    pickUpItem: 0
+  - dialogueId: quest2_case_wrong
+    questId: Level2_Book
+    objectiveId: Forbidden2
+    completeObjective: 0
+    pickUpItem: 0
 --- !u!212 &1922477070
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10585,6 +11014,156 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1925976007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1925976008}
+  - component: {fileID: 1925976009}
+  - component: {fileID: 1925976011}
+  - component: {fileID: 1925976010}
+  m_Layer: 0
+  m_Name: ForbiddenBook
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1925976008
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925976007}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.23, y: 2.158, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 880831293}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1925976009
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925976007}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 1638328657, guid: 828a6cdee91092042aa163fd3e196734, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.5, y: 0.5}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!61 &1925976010
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925976007}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 0.5, y: 0.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
+--- !u!114 &1925976011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925976007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4c856379fefd74bb7bc77ff2867393, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 2ed19b06d133639458b75efef8778d25, type: 2}
+  dialogueChoice:
+  - dialogueId: quest2_findbook
+    questId: Level1_Book
+    objectiveId: Forbidden1
+    completeObjective: 1
+    pickUpItem: 1
 --- !u!1 &1950321240
 GameObject:
   m_ObjectHideFlags: 0
@@ -10676,12 +11255,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4c856379fefd74bb7bc77ff2867393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ccc43c0083bae51499e6749ca4eaf82a, type: 2}
+  item: {fileID: 0}
   dialogueChoice:
   - dialogueId: quest1_case_wrong
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 0
+    pickUpItem: 0
+  - dialogueId: quest2_case_wrong
+    questId: Level2_Book
+    objectiveId: Forbidden2
+    completeObjective: 0
+    pickUpItem: 0
 --- !u!212 &1950321244
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10825,12 +11410,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4c856379fefd74bb7bc77ff2867393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ccc43c0083bae51499e6749ca4eaf82a, type: 2}
+  item: {fileID: 11400000, guid: 0e64b14820b304045b47669e366a3676, type: 2}
   dialogueChoice:
   - dialogueId: quest1_case_wrong
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 0
+    pickUpItem: 0
+  - dialogueId: quest1_case_right
+    questId: Level2_Book
+    objectiveId: Forbidden2
+    completeObjective: 0
+    pickUpItem: 1
 --- !u!212 &2092355811
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10974,12 +11565,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4c856379fefd74bb7bc77ff2867393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ccc43c0083bae51499e6749ca4eaf82a, type: 2}
+  item: {fileID: 0}
   dialogueChoice:
   - dialogueId: quest1_case_wrong
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 0
+    pickUpItem: 0
+  - dialogueId: quest2_case_wrong
+    questId: Level2_Book
+    objectiveId: Forbidden2
+    completeObjective: 0
+    pickUpItem: 0
 --- !u!212 &2092592123
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11123,12 +11720,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4c856379fefd74bb7bc77ff2867393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ccc43c0083bae51499e6749ca4eaf82a, type: 2}
+  item: {fileID: 0}
   dialogueChoice:
   - dialogueId: quest1_case_wrong
     questId: Level1_Patron
     objectiveId: Patron2
     completeObjective: 0
+    pickUpItem: 0
+  - dialogueId: quest2_case_wrong
+    questId: Level2_Book
+    objectiveId: Forbidden2
+    completeObjective: 0
+    pickUpItem: 0
 --- !u!212 &2119020225
 SpriteRenderer:
   m_ObjectHideFlags: 0

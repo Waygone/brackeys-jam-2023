@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9443c6262cdbb7746a6867360eefe6ea, type: 3}
-  m_Name: 2.SpookyBook
+  m_Script: {fileID: 11500000, guid: 9eb9d62e8bd454ca6bbac80b15651001, type: 3}
+  m_Name: Quest2_FoundBooks
   m_EditorClassIdentifier: 
-  questId: Level1_Book
-  questName: Unknown Book
-  description: Unknown Book
-  objectives: []
+  Id: quest2_foundbooks
+  DialoguePassages:
+  - Title: Librarian
+    Message: That's all the volumes! I should go back to the first one and try this...
+    SecondsPerCharacter: 0.05

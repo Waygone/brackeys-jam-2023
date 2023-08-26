@@ -11,8 +11,8 @@ public class Level1Interactable : MonoBehaviour, IInteractable
     [Tooltip("Which dialogue will display when interacting with the interactable during which quest/objective")]
     [SerializeField] private DialogueChoice[] dialogueChoice;
 
-    private DialogueManager dialogueManager; // need to get somehow
-    private BookManager bookManager; // Need to get somehow
+    private DialogueManager dialogueManager;
+    private BookManager bookManager;
     private BookDB bookDb;
     private DialogueDB dialogueDb;
 
@@ -49,7 +49,7 @@ public class Level1Interactable : MonoBehaviour, IInteractable
     {
         dialogueManager.OnDialogueEnd -= DialogueEndHandler;
 
-        if (item != null)
+        if (item != null && curDialogueChoice.pickUpItem)
         {
             var bookId = item.BookId;
             if (!string.IsNullOrEmpty(bookId))
@@ -110,7 +110,7 @@ public class Level1Interactable : MonoBehaviour, IInteractable
         }
         if (!validDialogue)
         {
-            return "test";
+            return "";
         }
         return "Interact [E]";
     }

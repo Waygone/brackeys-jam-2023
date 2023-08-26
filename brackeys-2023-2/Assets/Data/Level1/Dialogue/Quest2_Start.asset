@@ -10,17 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9eb9d62e8bd454ca6bbac80b15651001, type: 3}
-  m_Name: Quest1_Case_Right
+  m_Name: Quest2_Start
   m_EditorClassIdentifier: 
-  Id: quest1_case_right
+  Id: quest2_start
   DialoguePassages:
   - Title: Librarian
-    Message: There's the book he wants!
+    Message: Huh? What was that bang.
     SecondsPerCharacter: 0.05
   - Title: Librarian
-    Message: I miss this book series... I should re-read it one time.
+    Message: I should go and investigate.
     SecondsPerCharacter: 0.05
-  - Title: TUTORIAL
-    Message: Press the W and A keys to flip book pages left and right. Press ESC
-      to stop reading a book.
-    SecondsPerCharacter: 0.01

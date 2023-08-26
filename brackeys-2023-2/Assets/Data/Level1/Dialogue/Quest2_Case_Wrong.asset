@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5837a66f4d6c89049b77809fd99b784e, type: 3}
-  m_Name: TheLostSeaBook
+  m_Script: {fileID: 11500000, guid: 9eb9d62e8bd454ca6bbac80b15651001, type: 3}
+  m_Name: Quest2_Case_Wrong
   m_EditorClassIdentifier: 
-  itemId: lostsea
-  itemName: The Lost Sea Zrum Latrin
-  bookId: thelostsea
+  Id: quest2_case_wrong
+  DialoguePassages:
+  - Title: Librarian
+    Message: No.... none of the volumes are on here.
+    SecondsPerCharacter: 0.05
