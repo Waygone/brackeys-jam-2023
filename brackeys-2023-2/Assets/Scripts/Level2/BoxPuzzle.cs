@@ -14,7 +14,7 @@ public class BoxPuzzle : MonoBehaviour, IInteractable
     }
 
     [SerializeField]
-    private NewPlayerMovement _PlayerMovement;
+    private PlayerController _PlayerController;
     [SerializeField]
     private CanMove _CanMove;
     [SerializeField]
@@ -23,6 +23,15 @@ public class BoxPuzzle : MonoBehaviour, IInteractable
     private Utils.Direction _playerDirection;
     private bool _isMoving = false;
     private bool _isControlled = false;
+
+    private Tile _tile;
+
+    private void Start()
+    {
+        _tile = ScriptableObject.CreateInstance<Tile>();
+        _tile.name = "BoxPuzzle";
+        _CollisionTilemap.SetTile(_CollisionTilemap.WorldToCell(transform.position), _tile);
+    }
 
     private void Update()
     {
@@ -121,12 +130,15 @@ public class BoxPuzzle : MonoBehaviour, IInteractable
     private IEnumerator MoveImpl(Vector3 direction)
     {
         _isMoving = true;
+
+        _CollisionTilemap.SetTile(_CollisionTilemap.WorldToCell(transform.position), null);
+
         float t = 0;
         Vector3 startBoxPosition = transform.position;
-        Vector3 startPlayerPosition = _PlayerMovement.transform.position;
+        Vector3 startPlayerPosition = _PlayerController.transform.position;
 
         Vector3 targeBoxPosition = transform.position + direction;
-        Vector3 targetPlayerPosition = _PlayerMovement.transform.position + direction;
+        Vector3 targetPlayerPosition = _PlayerController.transform.position + direction;
         while (t < 1)
         {
             t = Math.Clamp(t + Time.deltaTime, 0f, 1f);
@@ -134,11 +146,12 @@ public class BoxPuzzle : MonoBehaviour, IInteractable
             Vector3 newPlayerPosition = Vector3.Lerp(startPlayerPosition, targetPlayerPosition, t);
 
             transform.position = newBoxPosition;
-            _PlayerMovement.transform.position = newPlayerPosition;
+            _PlayerController.transform.position = newPlayerPosition;
 
             yield return null;
         }
 
+        _CollisionTilemap.SetTile(_CollisionTilemap.WorldToCell(transform.position), _tile);
         _isMoving = false;
     }
 
@@ -164,12 +177,12 @@ public class BoxPuzzle : MonoBehaviour, IInteractable
 
         if (_isControlled)
         {
-            _PlayerMovement.DisableMoveBox();
+            _PlayerController.DisableMoveBox(transform.position, _playerDirection);
             _isControlled = false;
         }
         else
         {
-            _PlayerMovement.EnableMoveBox(transform.position, transform.localScale, _CanMove, out _playerDirection);
+            _PlayerController.EnableMoveBox(transform.position, _CanMove, out _playerDirection);
             _isControlled = true;
         }
     }
@@ -178,6 +191,13 @@ public class BoxPuzzle : MonoBehaviour, IInteractable
     {
         Vector3Int gridPos = _CollisionTilemap.WorldToCell(transform.position + direction);
         if (_CollisionTilemap.HasTile(gridPos))
+        {
+            return false;
+        }
+
+        // For player collision.
+        Vector3Int gridPos2 = _CollisionTilemap.WorldToCell(transform.position + direction * 2);
+        if (_CollisionTilemap.HasTile(gridPos2))
         {
             return false;
         }
