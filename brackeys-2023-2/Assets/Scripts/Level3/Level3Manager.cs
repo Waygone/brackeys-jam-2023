@@ -8,7 +8,8 @@ public class Level3Manager : MonoBehaviour
         FOUND_MUSIC_SHEETS,
         FOUND_DECIPHER_BOOK,
         FOUND_PIANO_KEYS,
-        PLAYED_FINAL_SONG,
+        PLAYED_FINAL_SONG_FORWARD,
+        PLAYED_FINAL_SONG_BACKWARD,
     }
 
     public delegate void Level3StateChangeHandler(Level3State state);
@@ -18,6 +19,10 @@ public class Level3Manager : MonoBehaviour
     private Level3Test _Level3Test;
     [SerializeField]
     private PianoPuzzle _PianoPuzzle;
+    [SerializeField]
+    private DialogueDB _DialogueDB;
+    [SerializeField]
+    private DialogueManager _DialogueManager;
 
     private readonly bool[] _hasFoundMusicSheets = new bool[3];
     private bool _hasFoundDecipherBook;
@@ -27,8 +32,22 @@ public class Level3Manager : MonoBehaviour
 
     private void Start()
     {
-        _Level3Test.OnPickupItem += ItemPickupHandler;
         _PianoPuzzle.OnPianoPuzzleSolved += PianoPuzzleSolvedHandler;
+        _PianoPuzzle.OnPianoPuzzleWrong += PianoPuzzleWrongHandler;
+
+        _DialogueManager.OnDialogueEnd += (Dialogue dialogue) => { if (dialogue.Id == "piano-success") { LevelManager.Instance.TryJumpToLevel(1); } };
+
+        Dialogue dialogue = _DialogueDB.GetDialogue("find-music-sheets");
+        _DialogueManager.TrySetDialogue(dialogue);
+        _DialogueManager.PlayDialogue();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            _DialogueManager.SkipPassage();
+        }
     }
 
     private void Reset()
@@ -47,44 +66,19 @@ public class Level3Manager : MonoBehaviour
         OnLevel3StateChange?.Invoke(_state);
     }
 
-    // TODO: change this with the appropriate event and dont allow to
-    // pickup things not allowed in current stage.
-    private void ItemPickupHandler(string item)
+    public void SetFoundMusicSheet(int index)
     {
-        switch (item)
-        {
-            case "MusicSheet0":
-                {
-                    _hasFoundMusicSheets[0] = true;
-                    break;
-                }
-            case "MusicSheet1":
-                {
-                    _hasFoundMusicSheets[1] = true;
-                    break;
-                }
-            case "MusicSheet2":
-                {
-                    _hasFoundMusicSheets[2] = true;
-                    break;
-                }
-            case "DecipherBook":
-                {
-                    _hasFoundDecipherBook = true;
-                    break;
-                }
-            case "PianoKey0":
-                {
-                    _hasFoundPianoKeys[0] = true;
-                    break;
-                }
-            case "PianoKey1":
-                {
-                    _hasFoundPianoKeys[1] = true;
-                    break;
-                }
-        }
-
+        _hasFoundMusicSheets[index] = true;
+        UpdateState();
+    }
+    public void SetFoundDecipherBook()
+    {
+        _hasFoundDecipherBook = true;
+        UpdateState();
+    }
+    public void SetFoundPianoKeys(int index)
+    {
+        _hasFoundPianoKeys[index] = true;
         UpdateState();
     }
 
@@ -101,7 +95,11 @@ public class Level3Manager : MonoBehaviour
                             return;
                         }
                     }
+
                     _state = Level3State.FOUND_MUSIC_SHEETS;
+                    Dialogue dialogue = _DialogueDB.GetDialogue("find-decipher-book");
+                    _DialogueManager.TrySetDialogue(dialogue);
+                    _DialogueManager.PlayDialogue();
                     break;
                 }
             case Level3State.FOUND_MUSIC_SHEETS:
@@ -111,6 +109,9 @@ public class Level3Manager : MonoBehaviour
                         return;
                     }
                     _state = Level3State.FOUND_DECIPHER_BOOK;
+                    Dialogue dialogue = _DialogueDB.GetDialogue("find-piano-keys");
+                    _DialogueManager.TrySetDialogue(dialogue);
+                    _DialogueManager.PlayDialogue();
                     break;
                 }
             case Level3State.FOUND_DECIPHER_BOOK:
@@ -123,6 +124,9 @@ public class Level3Manager : MonoBehaviour
                         }
                     }
                     _state = Level3State.FOUND_PIANO_KEYS;
+                    Dialogue dialogue = _DialogueDB.GetDialogue("play-the-piano");
+                    _DialogueManager.TrySetDialogue(dialogue);
+                    _DialogueManager.PlayDialogue();
                     break;
                 }
         }
@@ -131,13 +135,39 @@ public class Level3Manager : MonoBehaviour
         Debug.LogWarning("Level3 " + _state);
     }
 
-    private void PianoPuzzleSolvedHandler()
+    private void PianoPuzzleSolvedHandler(int phase)
     {
-        if (_state == Level3State.FOUND_PIANO_KEYS)
+        if (_state == Level3State.FOUND_PIANO_KEYS && phase == 0)
         {
-            _state = Level3State.PLAYED_FINAL_SONG;
+            _state = Level3State.PLAYED_FINAL_SONG_FORWARD;
+            Dialogue dialogue = _DialogueDB.GetDialogue("piano-hint-backwards");
+            _DialogueManager.TrySetDialogue(dialogue);
+            _DialogueManager.PlayDialogue();
+
             OnLevel3StateChange?.Invoke(_state);
-            Debug.LogWarning("Level3 end");
+        }
+
+        if (_state == Level3State.PLAYED_FINAL_SONG_FORWARD && phase == 1)
+        {
+            _state = Level3State.PLAYED_FINAL_SONG_BACKWARD;
+            Dialogue dialogue = _DialogueDB.GetDialogue("piano-success");
+            _DialogueManager.TrySetDialogue(dialogue);
+            _DialogueManager.PlayDialogue();
+        }
+    }
+    private void PianoPuzzleWrongHandler(int phase)
+    {
+        if (phase == 0)
+        {
+            Dialogue dialogue = _DialogueDB.GetDialogue("piano-wrong-song");
+            _DialogueManager.TrySetDialogue(dialogue);
+            _DialogueManager.PlayDialogue();
+        }
+        else
+        {
+            Dialogue dialogue = _DialogueDB.GetDialogue("piano-hint-backwards-short");
+            _DialogueManager.TrySetDialogue(dialogue);
+            _DialogueManager.PlayDialogue();
         }
     }
 }
