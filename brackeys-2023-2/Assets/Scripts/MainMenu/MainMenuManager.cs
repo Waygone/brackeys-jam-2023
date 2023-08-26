@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
@@ -28,6 +29,9 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField]
     private Button _CreditsBackButton;
 
+    [SerializeField]
+    private PauseManager _PauseManager;
+
     private void Start()
     {
         _MainPlayButton.onClick.AddListener(MainCanvasClickPlayHandler);
@@ -43,7 +47,14 @@ public class MainMenuManager : MonoBehaviour
 
     private void MainCanvasClickPlayHandler()
     {
-        LevelManager.Instance.TryAdvanceToNextLevel();
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            LevelManager.Instance.TryAdvanceToNextLevel();
+        }
+        else
+        {
+            _PauseManager.Play();
+        }
     }
     private void MainSettingsClickCreditsHandler()
     {
