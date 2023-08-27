@@ -1,4 +1,6 @@
+using UnityEditor.Build.Content;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Level2DoorInteractable : MonoBehaviour, IInteractable
 {
@@ -38,6 +40,6 @@ public class Level2DoorInteractable : MonoBehaviour, IInteractable
         }
         QuestManager.instance.TriggerQuestObj("Keys2");
         Debug.Log("Going to next level");
-        LevelManager.Instance.TryAdvanceToNextLevel();
+        SceneManager.LoadScene(3);
     }
 }

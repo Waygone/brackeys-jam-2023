@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Level1Manager : MonoBehaviour
 {
@@ -45,7 +46,7 @@ public class Level1Manager : MonoBehaviour
 
     public BookManager BookManager
     {
-        get => bookManager; 
+        get => bookManager;
         set => bookManager = value;
     }
 
@@ -83,32 +84,32 @@ public class Level1Manager : MonoBehaviour
         StartCoroutine(Quest1Opening());
     }
 
-        private void Update()
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
         {
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                dialogueManager.SkipPassage();
-            }
-
-            if (Input.GetKeyDown(KeyCode.H) && PlayerController.ArePlayerControlsEnabled)
-            {
-                GetHint();
-            }
-
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                bookManager.CloseBook();
-            }
-
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                bookManager.TryFlipPage(BookManager.FlipDirection.LEFT);
-            }
-            else if (Input.GetKeyDown(KeyCode.D))
-            {
-                bookManager.TryFlipPage(BookManager.FlipDirection.RIGHT);
-            }
+            dialogueManager.SkipPassage();
         }
+
+        if (Input.GetKeyDown(KeyCode.H) && PlayerController.ArePlayerControlsEnabled)
+        {
+            GetHint();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            bookManager.CloseBook();
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            bookManager.TryFlipPage(BookManager.FlipDirection.LEFT);
+        }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            bookManager.TryFlipPage(BookManager.FlipDirection.RIGHT);
+        }
+    }
 
     public void AddToInventory(Level1Item item)
     {
@@ -203,7 +204,7 @@ public class Level1Manager : MonoBehaviour
                 QuestManager.instance.TriggerQuestObj("Forbidden3");
                 break;
             case "quest2_hiddenstaircase":
-                LevelManager.Instance.TryAdvanceToNextLevel();
+                SceneManager.LoadScene(2);
                 break;
         }
     }
