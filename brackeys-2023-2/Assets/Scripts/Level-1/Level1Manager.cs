@@ -257,7 +257,7 @@ public class Level1Manager : MonoBehaviour
 
         playerController.TogglePlayerControls(false);
 
-        soundEffectAudio.volume = GlobalData.MainVolume;
+        soundEffectAudio.volume = GlobalData.MainVolume / 100f;
         soundEffectAudio.PlayOneShot(bookFallSound);
 
         forbiddenBook.SetActive(true);
