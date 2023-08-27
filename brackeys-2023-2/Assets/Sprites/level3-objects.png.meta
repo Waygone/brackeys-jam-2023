@@ -137,117 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< Updated upstream
-      spriteID: 05e6f2349af64488cbc183d744de01df
-      internalID: -60287935
-=======
-      spriteID: b305e6b9a6dbaf7498bf7332b26e589e
-      internalID: 492699667
->>>>>>> Stashed changes
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: level3-objects_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-<<<<<<< Updated upstream
-      spriteID: 8360f8cc19d594f4a9f08d4643ca4f44
-      internalID: 2067396695
-=======
-      spriteID: f4ceb8b63264abe4598907b067d2655c
-      internalID: 784688583
->>>>>>> Stashed changes
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: level3-objects_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-<<<<<<< Updated upstream
-      spriteID: 3cb4eab813db6442cb17b911e44e2d73
-      internalID: -1834424780
-=======
-      spriteID: 79e7781d8d6198a4f866d3600ff4804e
-      internalID: 1285171080
->>>>>>> Stashed changes
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: level3-objects_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-<<<<<<< Updated upstream
-      spriteID: 883811cd75dd743e98cd2c97ebc85e0b
-      internalID: 580013260
-=======
-      spriteID: f7a184c0d5d1f3b4d96dfe7d68b9854c
-      internalID: -1483985463
->>>>>>> Stashed changes
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: level3-objects_4
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-<<<<<<< Updated upstream
-      spriteID: fcc51a0b2fd3d4ca29c06dc26112efc5
-      internalID: 738663669
-=======
-      spriteID: f115fd8bf7b06174b886325eba872569
-      internalID: -931118944
->>>>>>> Stashed changes
+      spriteID: c3a379310a673a5a0800000000000000
+      internalID: -6511230206352082372
       vertices: []
       indices: 
       edges: []
@@ -255,7 +146,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -263,19 +154,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-<<<<<<< Updated upstream
-      level3-objects_0: -60287935
-      level3-objects_1: 2067396695
-      level3-objects_2: -1834424780
-      level3-objects_3: 580013260
-      level3-objects_4: 738663669
-=======
-      level3-objects_0: 492699667
-      level3-objects_1: 784688583
-      level3-objects_2: 1285171080
-      level3-objects_3: -1483985463
-      level3-objects_4: -931118944
->>>>>>> Stashed changes
+      level3-objects_0: -6511230206352082372
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
