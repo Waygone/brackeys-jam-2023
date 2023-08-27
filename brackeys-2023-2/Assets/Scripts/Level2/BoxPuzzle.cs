@@ -19,6 +19,8 @@ public class BoxPuzzle : MonoBehaviour, IInteractable
     private CanMove _CanMove;
     [SerializeField]
     private Tilemap _CollisionTilemap;
+    [SerializeField]
+    private Tilemap _MovementTilemap;
 
     private Utils.Direction _playerDirection;
     private bool _isMoving = false;
@@ -190,14 +192,14 @@ public class BoxPuzzle : MonoBehaviour, IInteractable
     private bool CanMoveTo(Vector3 direction)
     {
         Vector3Int gridPos = _CollisionTilemap.WorldToCell(transform.position + direction);
-        if (_CollisionTilemap.HasTile(gridPos))
+        if (_CollisionTilemap.HasTile(gridPos) || !_MovementTilemap.HasTile(gridPos))
         {
             return false;
         }
 
         // For player collision.
         Vector3Int gridPos2 = _CollisionTilemap.WorldToCell(transform.position + direction * 2);
-        if (_CollisionTilemap.HasTile(gridPos2))
+        if (_CollisionTilemap.HasTile(gridPos2) || !_MovementTilemap.HasTile(gridPos2))
         {
             return false;
         }

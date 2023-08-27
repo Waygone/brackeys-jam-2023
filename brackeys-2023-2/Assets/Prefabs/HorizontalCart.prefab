@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1251454665, guid: 6c178d96ebd8a2549ae1e90b0c093f82, type: 3}
+  m_Sprite: {fileID: -1263245920, guid: dd17b730a259faa4393b019604ef9090, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -146,3 +146,4 @@ MonoBehaviour:
   _PlayerController: {fileID: 0}
   _CanMove: 2
   _CollisionTilemap: {fileID: 0}
+  _MovementTilemap: {fileID: 0}

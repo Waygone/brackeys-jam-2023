@@ -36,6 +36,7 @@ public class Level2DoorInteractable : MonoBehaviour, IInteractable
         {
             return;
         }
+        QuestManager.instance.TriggerQuestObj("Keys2");
         Debug.Log("Going to next level");
         LevelManager.Instance.TryAdvanceToNextLevel();
     }
