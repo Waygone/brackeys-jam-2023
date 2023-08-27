@@ -82,15 +82,18 @@ public class Level1Manager : MonoBehaviour
         bookManager.OnBookOpen += BookOpenHandler;
         bookManager.OnBookClose += BookCloseHandler;
 
+        Debug.Log(GlobalData.State);
+
         if (!(GlobalData.State == GlobalData.GameState.LEVEL_1_END_GAME))
         {
             StartCoroutine(Quest1Opening());
-        } else
+        }
+        else
         {
             playerController.playerAnimator.SetFloat("Dir", 0);
             StartCoroutine(EndgameOpening());
         }
-        
+
     }
 
     private void Update()

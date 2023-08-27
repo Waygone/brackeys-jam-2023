@@ -36,7 +36,7 @@ public class Level3Manager : MonoBehaviour
 
     private void Start()
     {
-        GlobalData.TrySetState(GlobalData.GameState.LEVEL_3);
+        GlobalData.TrySetState(GlobalData.GameState.LEVEL_3, false);
 
         _PianoPuzzle.OnPianoPuzzleSolved += PianoPuzzleSolvedHandler;
         _PianoPuzzle.OnPianoPuzzleWrong += PianoPuzzleWrongHandler;
@@ -51,7 +51,7 @@ public class Level3Manager : MonoBehaviour
             _PlayerController.TogglePlayerControls(true);
             if (dialogue.Id == "piano-success")
             {
-                GlobalData.TrySetState(GlobalData.GameState.LEVEL_1_END_GAME);
+                GlobalData.TrySetState(GlobalData.GameState.LEVEL_1_END_GAME, false);
                 SceneManager.LoadScene(1);
             }
         };
