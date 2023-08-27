@@ -92,8 +92,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4
-  m_fontSizeBase: 4
+  m_fontSize: 6
+  m_fontSizeBase: 6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -248,6 +248,7 @@ GameObject:
   - component: {fileID: 8201888065592489302}
   - component: {fileID: 4617683134099939705}
   - component: {fileID: 3156894094244992793}
+  - component: {fileID: 8481754950114065778}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -336,7 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 144c1e2f72bf240ee893efbf430b3ba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _InteractionSize: {x: 0.5, y: 0.5}
+  _InteractionSize: {x: 0.8, y: 0.8}
   _InteractionCanvas: {fileID: 3120630957836927954}
   _InteractionText: {fileID: 3008415633775340775}
 --- !u!114 &3156894094244992793
@@ -351,10 +352,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c2f8b61482e4e47be2a75bcded9180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMoveSpeed: 8
+  playerMoveSpeed: 16
   colliderTilemap: {fileID: 0}
   movementTilemap: {fileID: 0}
   _PlayerInteraction: {fileID: 4617683134099939705}
+--- !u!95 &8481754950114065778
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3170057160256177958}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cd1bce248e6c16848b081d948aa8c077, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5749334837022317103
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,7 +449,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0

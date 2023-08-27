@@ -13,6 +13,8 @@ public class PianoManager : MonoBehaviour, IInteractable
     [SerializeField]
     private PlayerController _PlayerController;
     [SerializeField]
+    private Level3Manager _Level3Manager;
+    [SerializeField]
     private PianoPuzzle _PianoPuzzle;
     [SerializeField]
     private Canvas _PianoCanvas;
@@ -22,12 +24,25 @@ public class PianoManager : MonoBehaviour, IInteractable
     private Color _PressedKeyColor;
     [SerializeField]
     private DialogueManager _DialogueManager;
+    [SerializeField]
+    private AudioClip[] _PianoKeysAudioClips;
+    [SerializeField]
+    private AudioSource _AudioSource;
 
+    private bool _isInteractable = false;
     private bool _isFocused = false;
     private bool _isControlled = true;
 
     private void Start()
     {
+        _Level3Manager.OnLevel3StateChange += (Level3Manager.Level3State state) =>
+        {
+            if (state == Level3Manager.Level3State.FOUND_PIANO_KEYS)
+            {
+                _isInteractable = true;
+            }
+        };
+
         _DialogueManager.OnDialogueBegin += (Dialogue dialogue) => _isControlled = false;
         _DialogueManager.OnDialogueEnd += (Dialogue dialogue) => _isControlled = true;
     }
@@ -44,6 +59,7 @@ public class PianoManager : MonoBehaviour, IInteractable
             if (Input.GetKeyDown(_PianoKeys[i].KeyboardKeyCode) && _isControlled)
             {
                 _KeyImages[i].color = _PressedKeyColor;
+                _AudioSource.PlayOneShot(_PianoKeysAudioClips[i], GlobalData.MainVolume / 100f);
                 OnPianoKeyPress(_PianoKeys[i].ToPianoKey());
             }
 
@@ -56,6 +72,10 @@ public class PianoManager : MonoBehaviour, IInteractable
 
     public string EnterInteract()
     {
+        if (!_isInteractable)
+        {
+            return "";
+        }
         return "Play [E]";
     }
 
@@ -66,6 +86,11 @@ public class PianoManager : MonoBehaviour, IInteractable
 
     public void ClickInteract()
     {
+        if (!_isInteractable)
+        {
+            return;
+        }
+
         if (_isFocused)
         {
             _isFocused = false;
