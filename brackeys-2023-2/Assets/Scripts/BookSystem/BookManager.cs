@@ -57,9 +57,6 @@ public class BookManager : MonoBehaviour
 
     public void TryFlipPage(FlipDirection direction)
     {
-        if (!_isBookOpen)
-            return;
-
         // How much do we have to move?
         int pagesOffset = _book.PagesPerView * (int)direction;
         int newValue = Math.Clamp(_currentPageIndex + pagesOffset, 0, _book.Pages.Length - 1);
@@ -67,7 +64,7 @@ public class BookManager : MonoBehaviour
         // If something changed, then trigger the event.
         if (_currentPageIndex != newValue)
         {
-            _AudioSource.volume = GlobalData.MainVolume;
+            _AudioSource.volume = GlobalData.MainVolume / 100f;
             _AudioSource.PlayOneShot(_PageFlipAudioClip);
             _currentPageIndex = newValue;
             OnBookPageFlip?.Invoke(_book, _currentPageIndex);
