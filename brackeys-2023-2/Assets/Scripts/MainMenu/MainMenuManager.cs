@@ -34,6 +34,11 @@ public class MainMenuManager : MonoBehaviour
 
     private void Start()
     {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            GlobalData.TrySetState(GlobalData.GameState.MENU);
+        }
+
         _MainPlayButton.onClick.AddListener(MainCanvasClickPlayHandler);
         _MainSettingsButton.onClick.AddListener(MainSettingsClickCreditsHandler);
         _MainCreditsButton.onClick.AddListener(MainCanvasClickCreditsHandler);
