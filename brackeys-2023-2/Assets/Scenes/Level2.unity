@@ -427,7 +427,7 @@ Transform:
   m_GameObject: {fileID: 215752692}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 8, z: -10}
+  m_LocalPosition: {x: 4.5, y: 7.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1454,7 +1454,7 @@ Transform:
   m_GameObject: {fileID: 677241789}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: 8, z: -10}
+  m_LocalPosition: {x: 4.5, y: 7.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3581,7 +3581,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f57ef678149ab934fa9888642b47d4a6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8b38b23ab0ed394419697f37e960aada, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3710,7 +3710,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 821758347}
-  - {fileID: 1986301907}
   - {fileID: 1779432599}
   - {fileID: 435804876}
   - {fileID: 1730872802}
@@ -4716,7 +4715,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -5625,7 +5624,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1071926450}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1986301908
 BoxCollider2D:
@@ -5733,7 +5732,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -1252082497, guid: 95ee03d6f7eb7f74b9cab7d048a920e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -6054,11 +6053,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2311388471950092634, guid: 5aa64c7fa27cbcb4ea8fede6dc6cd281, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 2311388471950092634, guid: 5aa64c7fa27cbcb4ea8fede6dc6cd281, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 2311388471950092634, guid: 5aa64c7fa27cbcb4ea8fede6dc6cd281, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6131,3 +6130,4 @@ SceneRoots:
   - {fileID: 36944055}
   - {fileID: 1241483938}
   - {fileID: 1543347298}
+  - {fileID: 1986301907}
