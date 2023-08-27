@@ -67,7 +67,7 @@ public class BookManager : MonoBehaviour
         // If something changed, then trigger the event.
         if (_currentPageIndex != newValue)
         {
-            _AudioSource.volume = GlobalData.MainVolume;
+            _AudioSource.volume = GlobalData.MainVolume / 100f;
             _AudioSource.PlayOneShot(_PageFlipAudioClip);
             _currentPageIndex = newValue;
             OnBookPageFlip?.Invoke(_book, _currentPageIndex);

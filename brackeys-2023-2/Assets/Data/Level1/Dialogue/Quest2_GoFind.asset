@@ -18,7 +18,8 @@ MonoBehaviour:
     Message: How to summon a ghost?
     SecondsPerCharacter: 0.05
   - Title: Librarian
-    Message: This... this can't be real. No harm following along, could be fun!
+    Message: This... this can't be real. No harm following along though, could be
+      fun!
     SecondsPerCharacter: 0.05
   - Title: Librarian
     Message: Looks like there are two more volumes with the other steps. I should
