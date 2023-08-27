@@ -2351,6 +2351,18 @@ PrefabInstance:
       value: Panel
       objectReference: {fileID: 0}
     - target: {fileID: 3684450048545182767, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3684450048545182767, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d3dc0af967130f84da594eff43673cd3, type: 3}
+    - target: {fileID: 3684450048545182767, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3684450048545182767, guid: 2caf798db058faf4e89d0ffd2110fa5c, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
