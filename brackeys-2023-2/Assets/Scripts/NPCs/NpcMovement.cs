@@ -12,6 +12,13 @@ public class NpcMovement : MonoBehaviour
 
     private NpcMovePath queuedNpcMovePath = null;
 
+    private Animator npcAnimator;
+
+    private void Awake()
+    {
+        npcAnimator = GetComponent<Animator>();
+    }
+
     private void OnEnable()
     {
         movementGrid = GameObject.FindGameObjectWithTag("NpcMoveGrid").GetComponent<Grid>();
@@ -30,6 +37,8 @@ public class NpcMovement : MonoBehaviour
 
     private IEnumerator Movement(NpcMovePath movePath)
     {
+        npcAnimator.SetBool("Moving", true);
+
         var loop = movePath.Loop;
 
         do
@@ -42,6 +51,7 @@ public class NpcMovement : MonoBehaviour
             MovementDirection? preMoveDir = null;
             foreach (MovementDirection moveDir in movePath.PathDirections)
             {
+                npcAnimator.SetBool("East", moveDir == MovementDirection.EAST);
                 if (preMoveDir != null && moveDir != preMoveDir)
                 {
                     yield return new WaitForSeconds(movePath.TimeWaitAtEachTurn);
@@ -62,6 +72,7 @@ public class NpcMovement : MonoBehaviour
         } while (queuedNpcMovePath == null && loop);
 
         movementCoroutine = null;
+        npcAnimator.SetBool("Moving", false);
 
         if (queuedNpcMovePath != null)
         {
