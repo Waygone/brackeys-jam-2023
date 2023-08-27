@@ -14,8 +14,12 @@ public class MusicControl : MonoBehaviour
 
         if (GlobalData.State == GlobalData.GameState.LEVEL_1_END_GAME)
         {
-            musicSource.clip = endgameMusic;
+            musicSource.clip = endgameMusic; 
+            musicSource.loop = false;
+
         }
+
+        musicSource.Play();
     }
 
     private void Update()
