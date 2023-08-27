@@ -49,7 +49,8 @@ public class MainMenuManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-            LevelManager.Instance.TryAdvanceToNextLevel();
+            //LevelManager.Instance.TryAdvanceToNextLevel();
+            SceneManager.LoadScene(1);
         }
         else
         {
