@@ -15,7 +15,7 @@ MonoBehaviour:
   Id: patron2
   DialoguePassages:
   - Title: Patron
-    Message: Hey hey, have you found the book yet?
+    Message: Hey, hey, have you found the book yet?
     SecondsPerCharacter: 0.05
   - Title: Librarian
     Message: Not yet, still looking.

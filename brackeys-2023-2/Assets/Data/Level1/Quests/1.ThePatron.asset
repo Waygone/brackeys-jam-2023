@@ -24,8 +24,8 @@ MonoBehaviour:
   - objectiveId: Patron2
     description: Find "The Lost Sea" by Zrum Latrin
     trigger: Patron2
-    hintText: The library goes from front to back in alphabetical order of Authors
-      last name... where could "The Lost Sea" by Zrum Latrin be...
+    hintText: The library goes from front to back in alphabetical order of author's
+      last name... where could "The Lost Sea" by Zrum Latrin be...?
     objComplete: 0
   - objectiveId: Patron3
     description: Give the book to the patron
