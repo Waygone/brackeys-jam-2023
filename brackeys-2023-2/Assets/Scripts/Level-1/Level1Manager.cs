@@ -46,7 +46,7 @@ public class Level1Manager : MonoBehaviour
 
     public BookManager BookManager
     {
-        get => bookManager; 
+        get => bookManager;
         set => bookManager = value;
     }
 
@@ -92,32 +92,32 @@ public class Level1Manager : MonoBehaviour
         
     }
 
-        private void Update()
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
         {
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                dialogueManager.SkipPassage();
-            }
-
-            if (Input.GetKeyDown(KeyCode.H) && PlayerController.ArePlayerControlsEnabled)
-            {
-                GetHint();
-            }
-
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                bookManager.CloseBook();
-            }
-
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                bookManager.TryFlipPage(BookManager.FlipDirection.LEFT);
-            }
-            else if (Input.GetKeyDown(KeyCode.D))
-            {
-                bookManager.TryFlipPage(BookManager.FlipDirection.RIGHT);
-            }
+            dialogueManager.SkipPassage();
         }
+
+        if (Input.GetKeyDown(KeyCode.H) && PlayerController.ArePlayerControlsEnabled)
+        {
+            GetHint();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            bookManager.CloseBook();
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            bookManager.TryFlipPage(BookManager.FlipDirection.LEFT);
+        }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            bookManager.TryFlipPage(BookManager.FlipDirection.RIGHT);
+        }
+    }
 
     public void AddToInventory(Level1Item item)
     {

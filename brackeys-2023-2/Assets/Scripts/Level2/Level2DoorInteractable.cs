@@ -1,3 +1,4 @@
+using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -39,7 +40,6 @@ public class Level2DoorInteractable : MonoBehaviour, IInteractable
             return;
         }
         QuestManager.instance.TriggerQuestObj("Keys2");
-
         SceneManager.LoadScene(3);
     }
 }
