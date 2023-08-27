@@ -46,6 +46,8 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        Debug.Log("Playing dialogue2");
+
         StartCoroutine(PlayDialogueImpl());
     }
     private IEnumerator PlayDialogueImpl()
@@ -54,6 +56,7 @@ public class DialogueManager : MonoBehaviour
         _skipPassage = false;
 
         _isDialoguePlaying = true;
+        Debug.Log("Playing dialogue3");
         OnDialogueBegin?.Invoke(_dialogue);
 
         for (int passageIndex = 0; passageIndex < _dialogue.DialoguePassages.Length; ++passageIndex)

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Level3Manager : MonoBehaviour
@@ -23,6 +24,8 @@ public class Level3Manager : MonoBehaviour
     private DialogueDB _DialogueDB;
     [SerializeField]
     private DialogueManager _DialogueManager;
+    [SerializeField]
+    private PlayerController _PlayerController;
 
     private readonly bool[] _hasFoundMusicSheets = new bool[3];
     private bool _hasFoundDecipherBook;
@@ -32,10 +35,34 @@ public class Level3Manager : MonoBehaviour
 
     private void Start()
     {
+        GlobalData.TrySetState(GlobalData.GameState.LEVEL_3);
+
         _PianoPuzzle.OnPianoPuzzleSolved += PianoPuzzleSolvedHandler;
         _PianoPuzzle.OnPianoPuzzleWrong += PianoPuzzleWrongHandler;
 
-        _DialogueManager.OnDialogueEnd += (Dialogue dialogue) => { if (dialogue.Id == "piano-success") { LevelManager.Instance.TryJumpToLevel(1); } };
+        _DialogueManager.OnDialogueBegin += (Dialogue dialogue) =>
+        {
+            _PlayerController.TogglePlayerControls(false);
+        };
+
+        _DialogueManager.OnDialogueEnd += (Dialogue dialogue) =>
+        {
+            _PlayerController.TogglePlayerControls(true);
+            if (dialogue.Id == "piano-success")
+            {
+                GlobalData.TrySetState(GlobalData.GameState.LEVEL_1_END_GAME);
+                LevelManager.Instance.TryJumpToLevel(1);
+            }
+        };
+
+        Debug.Log("Playing dialogue");
+
+        StartCoroutine(PlayInitialDialogue());
+    }
+
+    private IEnumerator PlayInitialDialogue()
+    {
+        yield return new WaitForSeconds(3f);
 
         Dialogue dialogue = _DialogueDB.GetDialogue("find-music-sheets");
         _DialogueManager.TrySetDialogue(dialogue);
@@ -153,6 +180,8 @@ public class Level3Manager : MonoBehaviour
             Dialogue dialogue = _DialogueDB.GetDialogue("piano-success");
             _DialogueManager.TrySetDialogue(dialogue);
             _DialogueManager.PlayDialogue();
+
+
         }
     }
     private void PianoPuzzleWrongHandler(int phase)

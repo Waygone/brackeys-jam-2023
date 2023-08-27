@@ -11,6 +11,11 @@ public class Level1Manager : MonoBehaviour
     [SerializeField] private GameObject forbiddenBook;
     [SerializeField] private GameObject ghost;
 
+    [SerializeField]
+    private AudioClip bookFallSound;
+    [SerializeField]
+    private AudioSource soundEffectAudio;
+
     private Dictionary<string, Level1Item> inventory = new Dictionary<string, Level1Item>();
 
     private BookDB bookDb;
@@ -235,7 +240,8 @@ public class Level1Manager : MonoBehaviour
 
         playerController.TogglePlayerControls(false);
 
-        // Play sound here.
+        soundEffectAudio.volume = GlobalData.MainVolume;
+        soundEffectAudio.PlayOneShot(bookFallSound);
 
         forbiddenBook.SetActive(true);
 
