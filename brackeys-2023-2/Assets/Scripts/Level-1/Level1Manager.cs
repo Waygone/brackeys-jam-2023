@@ -209,6 +209,9 @@ public class Level1Manager : MonoBehaviour
             case "patron3":
                 StartCoroutine(Quest2());
                 break;
+            case "quest2_start":
+                playerController.TogglePlayerControls(false);
+                break;
             case "quest2_summoninghost":
                 StartCoroutine(Quest2_SummoningGhost());
                 break;
@@ -272,6 +275,8 @@ public class Level1Manager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(12);
+
+        playerController.TogglePlayerControls(true);
 
         QuestManager.instance.BeginQuest(quest2);
     }
