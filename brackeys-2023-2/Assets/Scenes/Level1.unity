@@ -7072,7 +7072,7 @@ MonoBehaviour:
   playerController: {fileID: 1790365942}
   quest1: {fileID: 11400000, guid: 42c504d97ddb2914c9cff366bad604b4, type: 2}
   quest2: {fileID: 11400000, guid: 8f677965f3bd1894aa60fc7fda1f3cbd, type: 2}
-  quest3: {fileID: 0}
+  quest3: {fileID: 11400000, guid: d4fda5ee270ab7d4dbf04e3adc21df3b, type: 2}
   level1Dolly: {fileID: 1346397125}
   forbiddenBook: {fileID: 1925976007}
   ghost: {fileID: 2096515192}
