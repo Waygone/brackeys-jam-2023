@@ -21,6 +21,10 @@ public class BoxPuzzle : MonoBehaviour, IInteractable
     private Tilemap _CollisionTilemap;
     [SerializeField]
     private Tilemap _MovementTilemap;
+    [SerializeField]
+    private AudioClip _AudioClip;
+    [SerializeField]
+    private AudioSource _AudioSource;
 
     private Utils.Direction _playerDirection;
     private bool _isMoving = false;
@@ -134,6 +138,7 @@ public class BoxPuzzle : MonoBehaviour, IInteractable
         _isMoving = true;
 
         _CollisionTilemap.SetTile(_CollisionTilemap.WorldToCell(transform.position), null);
+        _AudioSource.PlayOneShot(_AudioClip, GlobalData.MainVolume / 100f);
 
         float t = 0;
         Vector3 startBoxPosition = transform.position;
