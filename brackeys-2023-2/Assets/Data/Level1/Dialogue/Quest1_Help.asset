@@ -15,9 +15,9 @@ MonoBehaviour:
   Id: quest1_help
   DialoguePassages:
   - Title: Librarian
-    Message: The library goes from front to back in alphabetical order of Authors
-      last name... where could "The Lost Sea" by Zrum Latrin be...
+    Message: The library goes from front to back in alphabetical order of author's
+      last name... where could "The Lost Sea" by Zrum Latrin be...?
     SecondsPerCharacter: 0.05
   - Title: TUTORIAL
-    Message: You can press the 'H' key at any time for hints.
+    Message: You can press the H key at any time for hints.
     SecondsPerCharacter: 0.01

@@ -19,5 +19,5 @@ MonoBehaviour:
       sound.
     SecondsPerCharacter: 0.05
   - Title: Librarian
-    Message: Huh? What... what is this book... i've never seen this before...
+    Message: Huh? What... what is this book... I've never seen this before...
     SecondsPerCharacter: 0.05

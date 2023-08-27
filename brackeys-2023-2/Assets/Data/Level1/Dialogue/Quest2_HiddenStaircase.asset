@@ -15,7 +15,7 @@ MonoBehaviour:
   Id: quest2_hiddenstaircase
   DialoguePassages:
   - Title: Librarian
-    Message: The ghost was right... there is a hidden staircase here.
+    Message: The ghost was right... There is a hidden staircase here.
     SecondsPerCharacter: 0.05
   - Title: Librarian
     Message: Time for some exploring.

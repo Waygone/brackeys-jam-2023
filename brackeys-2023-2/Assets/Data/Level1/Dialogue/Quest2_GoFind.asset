@@ -23,5 +23,5 @@ MonoBehaviour:
     SecondsPerCharacter: 0.05
   - Title: Librarian
     Message: Looks like there are two more volumes with the other steps. I should
-      try to find them... hmm, what is identifiable about this book...
+      try to find them... Hmm, what is identifiable about this book...?
     SecondsPerCharacter: 0.05

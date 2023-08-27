@@ -15,5 +15,5 @@ MonoBehaviour:
   Id: quest2_case_wrong
   DialoguePassages:
   - Title: Librarian
-    Message: No.... none of the volumes are on here.
+    Message: No.... none of the volumes are here.
     SecondsPerCharacter: 0.05

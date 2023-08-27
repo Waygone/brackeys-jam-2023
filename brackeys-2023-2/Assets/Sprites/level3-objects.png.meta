@@ -126,7 +126,7 @@ TextureImporter:
       name: level3-objects_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 64
         y: 32
         width: 32
         height: 32
@@ -147,7 +147,7 @@ TextureImporter:
       name: level3-objects_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 96
         y: 32
         width: 32
         height: 32
@@ -168,7 +168,7 @@ TextureImporter:
       name: level3-objects_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 128
         y: 32
         width: 32
         height: 32
@@ -189,8 +189,8 @@ TextureImporter:
       name: level3-objects_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 160
+        y: 32
         width: 32
         height: 32
       alignment: 0
@@ -210,8 +210,8 @@ TextureImporter:
       name: level3-objects_4
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
+        x: 192
+        y: 32
         width: 32
         height: 32
       alignment: 0
@@ -223,6 +223,132 @@ TextureImporter:
       bones: []
       spriteID: 78aa26d265f96dd4da985d52dea186ba
       internalID: 1681984345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3-objects_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bcd68745c80a534382e73791a7bd84a
+      internalID: 1340106807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3-objects_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b900b7aa0c0bff64c819315c557c1f02
+      internalID: -2143294394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3-objects_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fec9a931d9740d46b75d1cf0670ae48
+      internalID: 480189371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3-objects_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 077eb983ffe52a446a72d61bd55cd657
+      internalID: -1021114052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3-objects_9
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 470f8148c0ef1d045bc90af6c29b4a27
+      internalID: 824587509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level3-objects_10
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a1342718c8938541b8fc806df6a03b8
+      internalID: -268410322
       vertices: []
       indices: 
       edges: []
@@ -240,9 +366,15 @@ TextureImporter:
     nameFileIdTable:
       level3-objects_0: -6511230206352082372
       level3-objects_1: 2029879415
+      level3-objects_10: -268410322
       level3-objects_2: 1068646814
       level3-objects_3: 703883172
       level3-objects_4: 1681984345
+      level3-objects_5: 1340106807
+      level3-objects_6: -2143294394
+      level3-objects_7: 480189371
+      level3-objects_8: -1021114052
+      level3-objects_9: 824587509
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

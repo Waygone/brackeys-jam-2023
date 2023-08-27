@@ -18,7 +18,7 @@ MonoBehaviour:
     Message: There's the book he wants!
     SecondsPerCharacter: 0.05
   - Title: Librarian
-    Message: I miss this book series... I should re-read it one time.
+    Message: I miss this book series... I should re-read it some time.
     SecondsPerCharacter: 0.05
   - Title: TUTORIAL
     Message: Press the W and A keys to flip book pages left and right. Press ESC

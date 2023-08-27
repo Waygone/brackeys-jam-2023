@@ -18,20 +18,20 @@ MonoBehaviour:
     Message: .....
     SecondsPerCharacter: 0.05
   - Title: Ghost
-    Message: Booooo
+    Message: Booooo!
     SecondsPerCharacter: 0.05
   - Title: Librarian
     Message: ...............
     SecondsPerCharacter: 0.05
   - Title: Ghost
-    Message: You have summoned me mortal, I am the ghost living in these stacks.
+    Message: You have summoned me, mortal. I am the ghost living in these stacks.
     SecondsPerCharacter: 0.05
   - Title: Librarian
     Message: You're... you're actually a real ghost?
     SecondsPerCharacter: 0.05
   - Title: Ghost
-    Message: I was forced into the afterlife many many years ago, cursed to haunt
-      these hallowed halls until someone can solve the puzzle of my binding.
+    Message: I was forced into the afterlife many, many years ago; cursed to haunt
+      these hallowed halls until someone could solve the puzzle of my binding.
     SecondsPerCharacter: 0.05
   - Title: Librarian
     Message: The puzzle of your binding?

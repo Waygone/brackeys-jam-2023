@@ -18,12 +18,12 @@ MonoBehaviour:
     Message: Here's the book! I hope your daughter enjoys it.
     SecondsPerCharacter: 0.05
   - Title: Patron
-    Message: Haha I already know she will! You've been a big help. I can never find
+    Message: Haha, I already know she will! You've been a big help. I can never find
       books in libraries, too many shelves.
     SecondsPerCharacter: 0.05
   - Title: Librarian
     Message: That's why we are here to help! Have a good day.
     SecondsPerCharacter: 0.05
   - Title: Patron
-    Message: Bye bye now.
+    Message: Bye-bye now.
     SecondsPerCharacter: 0.05

@@ -15,7 +15,7 @@ MonoBehaviour:
   Id: quest2_summoninghost
   DialoguePassages:
   - Title: Librarian
-    Message: Well.... here goes nothing.
+    Message: Well.... Here goes nothing.
     SecondsPerCharacter: 0.05
   - Title: Librarian
     Message: 'Klaatu.  '
