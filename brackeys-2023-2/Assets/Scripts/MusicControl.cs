@@ -6,9 +6,16 @@ public class MusicControl : MonoBehaviour
 {
     private AudioSource musicSource;
 
+    [SerializeField] private AudioClip endgameMusic;
+
     private void Awake()
     {
         musicSource = GetComponent<AudioSource>();
+
+        if (GlobalData.State == GlobalData.GameState.LEVEL_1_END_GAME)
+        {
+            musicSource.clip = endgameMusic;
+        }
     }
 
     private void Update()
