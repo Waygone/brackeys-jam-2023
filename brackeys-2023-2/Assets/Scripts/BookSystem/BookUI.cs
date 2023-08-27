@@ -41,20 +41,27 @@ public class BookUI : MonoBehaviour
     }
     private void UpdatePages(Book book, int pageIndex)
     {
-        if (pageIndex == 0)
-        {
-            _Pages[0].text = "";
-            _Pages[1].text = book.Pages[pageIndex].Text;
-        }
-        else if (pageIndex + 1 == book.Pages.Length)
+        if (book.PagesPerView == 1)
         {
             _Pages[0].text = book.Pages[pageIndex].Text;
-            _Pages[1].text = "";
         }
         else
         {
-            _Pages[0].text = book.Pages[pageIndex - 1].Text;
-            _Pages[1].text = book.Pages[pageIndex].Text;
+            if (pageIndex == 0)
+            {
+                _Pages[0].text = "";
+                _Pages[1].text = book.Pages[pageIndex].Text;
+            }
+            else if (pageIndex + 1 == book.Pages.Length)
+            {
+                _Pages[0].text = book.Pages[pageIndex].Text;
+                _Pages[1].text = "";
+            }
+            else
+            {
+                _Pages[0].text = book.Pages[pageIndex - 1].Text;
+                _Pages[1].text = book.Pages[pageIndex].Text;
+            }
         }
     }
 }

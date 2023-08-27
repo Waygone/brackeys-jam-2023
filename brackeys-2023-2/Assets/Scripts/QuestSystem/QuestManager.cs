@@ -12,18 +12,20 @@ public class QuestManager : MonoBehaviour
     public static event Action<string> ObjectiveTrigger;
 
     public UnityEvent QuestOrObjectiveUpdated;
+    public UnityEvent<string> QuestFinished;
 
     public Quest currentQuest { get; private set; }
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI questText;
+    [SerializeField] private TextMeshProUGUI objectiveText;
     [SerializeField] private TextMeshProUGUI hintText;
     [SerializeField] private Transform questContainer;
-    [SerializeField] private GameObject objectivePrefab;
-    [SerializeField] private GameObject questComplete;
+    //[SerializeField] private GameObject objectivePrefab;
+    //[SerializeField] private GameObject questComplete;
 
-    private TextMeshProUGUI currentObjectiveText;
-    private List<GameObject> spawnedObjectiveTexts = new List<GameObject>();
+    //private TextMeshProUGUI currentObjectiveText;
+    //private List<GameObject> spawnedObjectiveTexts = new List<GameObject>();
 
     private void Awake()
     {
@@ -62,29 +64,46 @@ public class QuestManager : MonoBehaviour
 
     public void UpdateObjective()
     {
-        if (currentObjectiveText != null)
-        {
-            currentObjectiveText.text = "<s>" + currentObjectiveText.text + "</s>";
-        }
-
-        var currentObjective = Instantiate(objectivePrefab, questContainer);
-        spawnedObjectiveTexts.Add(currentObjective);
-        currentObjectiveText = currentObjective.GetComponent<TextMeshProUGUI>();
-        currentObjectiveText.text = currentQuest.CurrentObjective.ToString();
+        StartCoroutine(ObjectiveChangeAnimation(currentQuest.CurrentObjective.ToString()));
 
         hintText.text = currentQuest.CurrentObjective.HintText;
 
         QuestOrObjectiveUpdated.Invoke();
     }
 
+    private IEnumerator ObjectiveChangeAnimation(string newObjective)
+    {
+        if (!string.IsNullOrEmpty(objectiveText.text))
+        {
+            objectiveText.text = "<s>" + objectiveText.text + "</s>";
+            yield return new WaitForSeconds(2);
+        }
+
+        objectiveText.text = "- " + newObjective;
+    }
+
     public void FinishQuest()
     {
-        questText.text = "No Active Quest";
-        spawnedObjectiveTexts.ForEach(x => Destroy(x));
-        spawnedObjectiveTexts.Clear();
+        StartCoroutine(FinishQuestAnimation());
+    }
 
+    private IEnumerator FinishQuestAnimation()
+    {
+        if (!string.IsNullOrEmpty(objectiveText.text))
+        {
+            objectiveText.text = "<s>" + objectiveText.text + "</s>";
+        }
+        questText.text = "<s>" + questText.text + "</s>";
+
+        yield return new WaitForSeconds(2);
+
+        questText.text = "No Active Quest";
+        objectiveText.text = "";
+
+        var previousQuestId = currentQuest.QuestId;
         currentQuest = null;
-        currentObjectiveText.text = "<s>" + currentObjectiveText.text + "</s>";
         //questComplete.SetActive(true);
+
+        QuestFinished.Invoke(previousQuestId);
     }
 }

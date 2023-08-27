@@ -18,6 +18,11 @@ public class BookManager : MonoBehaviour
     public delegate void BookCloseHandler(Book book);
     public event BookCloseHandler OnBookClose;
 
+    [SerializeField]
+    private AudioClip _PageFlipAudioClip;
+    [SerializeField]
+    private AudioSource _AudioSource;
+
     private Book _book = null;
     private bool _isBookOpen = false;
     private int _currentPageIndex = 0;
@@ -59,6 +64,8 @@ public class BookManager : MonoBehaviour
         // If something changed, then trigger the event.
         if (_currentPageIndex != newValue)
         {
+            _AudioSource.volume = GlobalData.MainVolume / 100f;
+            _AudioSource.PlayOneShot(_PageFlipAudioClip);
             _currentPageIndex = newValue;
             OnBookPageFlip?.Invoke(_book, _currentPageIndex);
         }

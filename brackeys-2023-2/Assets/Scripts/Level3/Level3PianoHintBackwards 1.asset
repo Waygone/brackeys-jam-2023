@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eb9d62e8bd454ca6bbac80b15651001, type: 3}
+  m_Name: Level3PianoHintBackwards 1
+  m_EditorClassIdentifier: 
+  Id: piano-success
+  DialoguePassages:
+  - Title: Ghost
+    Message: Oh I can feel something! I feel like I'm floating...
+    SecondsPerCharacter: 0.05
+  - Title: Ghost
+    Message: Thank you mortal, you've freed me of my restless wandering, thank youuu!!
+    SecondsPerCharacter: 0.1

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eb9d62e8bd454ca6bbac80b15651001, type: 3}
+  m_Name: Quest2_FindBook
+  m_EditorClassIdentifier: 
+  Id: quest2_findbook
+  DialoguePassages:
+  - Title: Librarian
+    Message: This book must have fell from the shelf. Surprised it made such a loud
+      sound.
+    SecondsPerCharacter: 0.05
+  - Title: Librarian
+    Message: Huh? What... what is this book... i've never seen this before...
+    SecondsPerCharacter: 0.05

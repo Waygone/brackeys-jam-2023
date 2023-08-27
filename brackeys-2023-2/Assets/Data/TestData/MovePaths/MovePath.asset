@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathDirections: 000000000000000000000000000000000300000003000000010000000100000001000000010000000200000002000000
   loop: 1
+  timeWaitAtEachPosition: 0.2
+  timeWaitAtEachTurn: 1
   startPosition:
     hasStartPosition: 0
     startPosition: {x: 0, y: 0}

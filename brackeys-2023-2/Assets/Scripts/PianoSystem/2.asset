@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64baf8b318a454b1b9367ae9e6ebb2db, type: 3}
   m_Name: 2
   m_EditorClassIdentifier: 
-  Key: 2
+  Key: Bb
   KeyboardKeyCode: 50

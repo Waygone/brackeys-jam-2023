@@ -13,13 +13,24 @@ public class PianoManager : MonoBehaviour, IInteractable
     [SerializeField]
     private PlayerController _PlayerController;
     [SerializeField]
+    private PianoPuzzle _PianoPuzzle;
+    [SerializeField]
     private Canvas _PianoCanvas;
     [SerializeField]
     private Image[] _KeyImages;
     [SerializeField]
     private Color _PressedKeyColor;
+    [SerializeField]
+    private DialogueManager _DialogueManager;
 
     private bool _isFocused = false;
+    private bool _isControlled = true;
+
+    private void Start()
+    {
+        _DialogueManager.OnDialogueBegin += (Dialogue dialogue) => _isControlled = false;
+        _DialogueManager.OnDialogueEnd += (Dialogue dialogue) => _isControlled = true;
+    }
 
     private void Update()
     {
@@ -30,7 +41,7 @@ public class PianoManager : MonoBehaviour, IInteractable
 
         for (int i = 0; i < _PianoKeys.Length; ++i)
         {
-            if (Input.GetKeyDown(_PianoKeys[i].KeyboardKeyCode))
+            if (Input.GetKeyDown(_PianoKeys[i].KeyboardKeyCode) && _isControlled)
             {
                 _KeyImages[i].color = _PressedKeyColor;
                 OnPianoKeyPress(_PianoKeys[i].ToPianoKey());
@@ -39,7 +50,6 @@ public class PianoManager : MonoBehaviour, IInteractable
             if (Input.GetKeyUp(_PianoKeys[i].KeyboardKeyCode))
             {
                 _KeyImages[i].color = Color.white;
-                OnPianoKeyPress(_PianoKeys[i].ToPianoKey());
             }
         }
     }
@@ -60,6 +70,7 @@ public class PianoManager : MonoBehaviour, IInteractable
         {
             _isFocused = false;
             _PianoCanvas.enabled = false;
+            _PianoPuzzle.Reset();
             _PlayerController.EnableMovement();
         }
         else
