@@ -121,15 +121,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: music notes
     originalName: 
-    pivot: {x: 0.5, y: -4.510638}
+    pivot: {x: 0.50204915, y: -1.6030151}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 486
-      height: 94
+      width: 488
+      height: 199
     spriteID: 430d5a23140213141979b9dcdac3de38
     spriteBone: []
     spriteOutline: []
@@ -151,10 +151,10 @@ ScriptedImporter:
     - name: music notes
       frameIndex: 0
       cellRect:
-        x: 257
-        y: 424
-        width: 486
-        height: 94
+        x: 255
+        y: 319
+        width: 488
+        height: 199
       spriteId: 430d5a23140213141979b9dcdac3de38
     linkedCells: []
     parentIndex: -1
