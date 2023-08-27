@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Level3Manager : MonoBehaviour
 {
@@ -51,7 +52,7 @@ public class Level3Manager : MonoBehaviour
             if (dialogue.Id == "piano-success")
             {
                 GlobalData.TrySetState(GlobalData.GameState.LEVEL_1_END_GAME);
-                LevelManager.Instance.TryJumpToLevel(1);
+                SceneManager.LoadScene(1);
             }
         };
 

@@ -3503,6 +3503,22 @@ PrefabInstance:
       propertyPath: _MusicSheetIndex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3071746873211063476, guid: 468c97f982e60469fa964bc6c993ef93, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071746873211063476, guid: 468c97f982e60469fa964bc6c993ef93, type: 3}
+      propertyPath: m_Size.y
+      value: 0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071746873211063476, guid: 468c97f982e60469fa964bc6c993ef93, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071746873211063476, guid: 468c97f982e60469fa964bc6c993ef93, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3530204750519210850, guid: 468c97f982e60469fa964bc6c993ef93, type: 3}
       propertyPath: m_Size.x
       value: 1
@@ -3521,11 +3537,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7530367804447409046, guid: 468c97f982e60469fa964bc6c993ef93, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.67
+      value: 6.3
       objectReference: {fileID: 0}
     - target: {fileID: 7530367804447409046, guid: 468c97f982e60469fa964bc6c993ef93, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.77
       objectReference: {fileID: 0}
     - target: {fileID: 7530367804447409046, guid: 468c97f982e60469fa964bc6c993ef93, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5166,6 +5182,22 @@ PrefabInstance:
       propertyPath: _Level3Manager
       value: 
       objectReference: {fileID: 1894559991}
+    - target: {fileID: 3071746873211063476, guid: 468c97f982e60469fa964bc6c993ef93, type: 3}
+      propertyPath: m_Size.x
+      value: 0.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071746873211063476, guid: 468c97f982e60469fa964bc6c993ef93, type: 3}
+      propertyPath: m_Size.y
+      value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071746873211063476, guid: 468c97f982e60469fa964bc6c993ef93, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071746873211063476, guid: 468c97f982e60469fa964bc6c993ef93, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3530204750519210850, guid: 468c97f982e60469fa964bc6c993ef93, type: 3}
       propertyPath: m_Size.x
       value: 1
@@ -5340,6 +5372,22 @@ PrefabInstance:
       propertyPath: _MusicSheetIndex
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3071746873211063476, guid: 468c97f982e60469fa964bc6c993ef93, type: 3}
+      propertyPath: m_Size.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071746873211063476, guid: 468c97f982e60469fa964bc6c993ef93, type: 3}
+      propertyPath: m_Size.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071746873211063476, guid: 468c97f982e60469fa964bc6c993ef93, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071746873211063476, guid: 468c97f982e60469fa964bc6c993ef93, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3530204750519210850, guid: 468c97f982e60469fa964bc6c993ef93, type: 3}
       propertyPath: m_Size.x
       value: 1
@@ -5358,11 +5406,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7530367804447409046, guid: 468c97f982e60469fa964bc6c993ef93, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -6.44
       objectReference: {fileID: 0}
     - target: {fileID: 7530367804447409046, guid: 468c97f982e60469fa964bc6c993ef93, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.71
+      value: -4.16
       objectReference: {fileID: 0}
     - target: {fileID: 7530367804447409046, guid: 468c97f982e60469fa964bc6c993ef93, type: 3}
       propertyPath: m_LocalPosition.z
