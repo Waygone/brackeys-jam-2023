@@ -16,10 +16,8 @@ public class MusicControl : MonoBehaviour
         {
             musicSource.clip = endgameMusic; 
             musicSource.loop = false;
-
+            musicSource.Play();
         }
-
-        musicSource.Play();
     }
 
     private void Update()
