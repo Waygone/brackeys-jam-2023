@@ -14,6 +14,7 @@ public class DialogueUI : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("Start");
         _DialogueManager.OnDialogueBegin += DialogueBeginHandler;
         _DialogueManager.OnPassageChange += PassageChangeHandler;
         _DialogueManager.OnDialogueMessageChange += DialogueMessageChangeHandler;
@@ -22,6 +23,7 @@ public class DialogueUI : MonoBehaviour
 
     private void DialogueBeginHandler(Dialogue dialogue)
     {
+        Debug.Log("Begin dialogue");
         _DialogueCanvas.enabled = true;
     }
     private void PassageChangeHandler(DialoguePassage passage)
