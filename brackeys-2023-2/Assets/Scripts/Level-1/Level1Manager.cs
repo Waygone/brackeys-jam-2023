@@ -81,7 +81,15 @@ public class Level1Manager : MonoBehaviour
         bookManager.OnBookOpen += BookOpenHandler;
         bookManager.OnBookClose += BookCloseHandler;
 
-        StartCoroutine(Quest1Opening());
+        if (!(GlobalData.State == GlobalData.GameState.LEVEL_1_END_GAME))
+        {
+            StartCoroutine(Quest1Opening());
+        } else
+        {
+            playerController.playerAnimator.SetFloat("Dir", 0);
+            StartCoroutine(EndgameOpening());
+        }
+        
     }
 
     private void Update()
@@ -269,5 +277,14 @@ public class Level1Manager : MonoBehaviour
         ghost.SetActive(true);
 
         PlayDialogue("quest2_ghostsummoned");
+    }
+
+    private IEnumerator EndgameOpening()
+    {
+
+        PlayerController.TogglePlayerControls(true);
+        yield return null;
+
+
     }
 }
