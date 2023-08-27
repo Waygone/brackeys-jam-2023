@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerInteraction _PlayerInteraction;
     private bool _arePlayerControlsEnabled = true;
 
-    private Animator playerAnimator;
+    public Animator playerAnimator { get; private set; }
 
     private Coroutine movementCoroutine = null;
 
