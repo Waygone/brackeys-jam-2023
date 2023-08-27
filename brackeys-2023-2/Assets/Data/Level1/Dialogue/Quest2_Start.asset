@@ -15,7 +15,7 @@ MonoBehaviour:
   Id: quest2_start
   DialoguePassages:
   - Title: Librarian
-    Message: Huh? What was that bang.
+    Message: Huh? What was that sound.
     SecondsPerCharacter: 0.05
   - Title: Librarian
     Message: I should go and investigate.
