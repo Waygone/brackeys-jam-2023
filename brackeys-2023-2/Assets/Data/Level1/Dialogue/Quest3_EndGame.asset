@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eb9d62e8bd454ca6bbac80b15651001, type: 3}
+  m_Name: Quest3_EndGame
+  m_EditorClassIdentifier: 
+  Id: quest3_endgame
+  DialoguePassages:
+  - Title: Librarian
+    Message: Huh? Where am I? Am I back in the library? Was that a dream?
+    SecondsPerCharacter: 0.05
+  - Title: Librarian
+    Message: Oh a customer...
+    SecondsPerCharacter: 0.05
+  - Title: Librarian
+    Message: Good evening, sir! Anything I can help you with today?
+    SecondsPerCharacter: 0.05
+  - Title: Patron
+    Message: Ohh, yes, yes, I'm here for a book actually. One my daughter wants to
+      pick up for this year's summer reading challenge.
+    SecondsPerCharacter: 0.05
+  - Title: LIbrarian
+    Message: What did you just say?
+    SecondsPerCharacter: 0.05
+  - Title: Patron
+    Message: I'm here for a book for my daughter.
+    SecondsPerCharacter: 0.05
+  - Title: Librarian
+    Message: Oh no.... it's happening again...
+    SecondsPerCharacter: 0.05

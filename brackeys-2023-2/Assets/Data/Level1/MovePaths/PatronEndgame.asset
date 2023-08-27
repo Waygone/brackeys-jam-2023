@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44bd168f44210214a859b952958cfb14, type: 3}
-  m_Name: Patron_Patrol
+  m_Name: PatronEndgame
   m_EditorClassIdentifier: 
-  pathDirections: 
+  pathDirections: 030000000300000003000000
   loop: 0
   timeWaitAtEachPosition: 0.1
   timeWaitAtEachTurn: 0.5
@@ -20,5 +20,5 @@ MonoBehaviour:
     hasStartPosition: 0
     startPosition: {x: 0, y: 0}
   levelName: 
-  questId: 
+  questId: endgame
   objectiveId: 

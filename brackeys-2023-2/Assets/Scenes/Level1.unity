@@ -6611,6 +6611,7 @@ MonoBehaviour:
   npcMovePaths:
   - {fileID: 11400000, guid: da5ec359118b74449a48b598836c5875, type: 2}
   - {fileID: 11400000, guid: 60b9ce61ca28c16429c011afb519fd0e, type: 2}
+  - {fileID: 11400000, guid: 1fc3c7ceea79d0c468b21ca29d7b9cad, type: 2}
 --- !u!114 &1528954571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6727,6 +6728,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 133195992}
     m_Modifications:
+    - target: {fileID: 214479357510113528, guid: 8741f180d8ed30d46862d46a38c88513, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 214479357510113528, guid: 8741f180d8ed30d46862d46a38c88513, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 214479357510113528, guid: 8741f180d8ed30d46862d46a38c88513, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 214479357510113528, guid: 8741f180d8ed30d46862d46a38c88513, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 214479357510113528, guid: 8741f180d8ed30d46862d46a38c88513, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4961416450915204067, guid: 8741f180d8ed30d46862d46a38c88513, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -6810,6 +6831,42 @@ PrefabInstance:
     - target: {fileID: 7353583771383656426, guid: 8741f180d8ed30d46862d46a38c88513, type: 3}
       propertyPath: m_Name
       value: QuestUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 8431480778970886562, guid: 8741f180d8ed30d46862d46a38c88513, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8431480778970886562, guid: 8741f180d8ed30d46862d46a38c88513, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8431480778970886562, guid: 8741f180d8ed30d46862d46a38c88513, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8431480778970886562, guid: 8741f180d8ed30d46862d46a38c88513, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8431480778970886562, guid: 8741f180d8ed30d46862d46a38c88513, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8431480778970886562, guid: 8741f180d8ed30d46862d46a38c88513, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8941725286466257212, guid: 8741f180d8ed30d46862d46a38c88513, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8941725286466257212, guid: 8741f180d8ed30d46862d46a38c88513, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8941725286466257212, guid: 8741f180d8ed30d46862d46a38c88513, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7014,6 +7071,7 @@ MonoBehaviour:
   playerController: {fileID: 1790365942}
   quest1: {fileID: 11400000, guid: 42c504d97ddb2914c9cff366bad604b4, type: 2}
   quest2: {fileID: 11400000, guid: 8f677965f3bd1894aa60fc7fda1f3cbd, type: 2}
+  quest3: {fileID: 0}
   level1Dolly: {fileID: 1346397125}
   forbiddenBook: {fileID: 1925976007}
   ghost: {fileID: 2096515192}
@@ -7103,6 +7161,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 875abc12c8dc1654aa49c2771176b059, type: 2}
   - {fileID: 11400000, guid: d3142ff1e61b32041998935780401e85, type: 2}
   - {fileID: 11400000, guid: 1f8153cd978693c46b68b858c390afa6, type: 2}
+  - {fileID: 11400000, guid: 2f658b63fc86c78448042b89268a82b1, type: 2}
 --- !u!114 &1644147605
 MonoBehaviour:
   m_ObjectHideFlags: 0

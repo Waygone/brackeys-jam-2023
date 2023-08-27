@@ -8,6 +8,7 @@ public class Level1Manager : MonoBehaviour
     [SerializeField] private PlayerController playerController;
     [SerializeField] private Quest quest1;
     [SerializeField] private Quest quest2;
+    [SerializeField] private Quest quest3;
     [SerializeField] private Level1Dolly level1Dolly;
     [SerializeField] private GameObject forbiddenBook;
     [SerializeField] private GameObject ghost;
@@ -214,6 +215,10 @@ public class Level1Manager : MonoBehaviour
             case "quest2_hiddenstaircase":
                 SceneManager.LoadScene(2);
                 break;
+            case "quest3_endgame":
+                PlayerController.TogglePlayerControls(false);
+                SceneManager.LoadScene(0);
+                break;
         }
     }
 
@@ -281,10 +286,12 @@ public class Level1Manager : MonoBehaviour
 
     private IEnumerator EndgameOpening()
     {
+        playerController.TogglePlayerControls(true);
+        playerController.transform.position = new Vector2(-10.5f, -1.5f);
+        QuestManager.instance.BeginQuest(quest3);
 
-        PlayerController.TogglePlayerControls(true);
-        yield return null;
+        yield return new WaitForSeconds(1); ;
 
-
+        PlayDialogue("quest3_endgame");
     }
 }
