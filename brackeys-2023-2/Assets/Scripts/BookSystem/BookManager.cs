@@ -57,6 +57,11 @@ public class BookManager : MonoBehaviour
 
     public void TryFlipPage(FlipDirection direction)
     {
+        if (!_isBookOpen)
+        {
+            return;
+        }
+
         // How much do we have to move?
         int pagesOffset = _book.PagesPerView * (int)direction;
         int newValue = Math.Clamp(_currentPageIndex + pagesOffset, 0, _book.Pages.Length - 1);
