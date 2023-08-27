@@ -758,6 +758,8 @@ MonoBehaviour:
   - {fileID: 1041231680}
   - {fileID: 474507353}
   _PressedKeyColor: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 1}
+  _SpriteRenderer: {fileID: 609553439}
+  _PianoFixedSprite: {fileID: -60287935, guid: f2684a8876f13304fba8fcbc59604c7c, type: 3}
   _DialogueManager: {fileID: 1894559996}
   _PianoKeysAudioClips:
   - {fileID: 8300000, guid: f92ce22ba7cbe47bd93ca5b9befa1f5c, type: 3}
@@ -814,7 +816,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.3, y: 0}
+  m_Offset: {x: 0, y: -0.3}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -825,7 +827,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.2}
+  m_Size: {x: 0.2, y: 0.1}
   m_EdgeRadius: 0
 --- !u!212 &609553439
 SpriteRenderer:
@@ -868,7 +870,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 0b7be86d1bc4046d4a1749deb0fb6312, type: 3}
+  m_Sprite: {fileID: 2067396695, guid: f2684a8876f13304fba8fcbc59604c7c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2369,6 +2371,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1104150862204212261, guid: 0a28e53766e284a83bab70b5608d268c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104150862204212261, guid: 0a28e53766e284a83bab70b5608d268c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104150862204212261, guid: 0a28e53766e284a83bab70b5608d268c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.26
       objectReference: {fileID: 0}
@@ -2419,6 +2429,22 @@ PrefabInstance:
     - target: {fileID: 5448578892979557449, guid: 0a28e53766e284a83bab70b5608d268c, type: 3}
       propertyPath: m_Name
       value: PianoKey (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5966662202496868133, guid: 0a28e53766e284a83bab70b5608d268c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 738663669, guid: f2684a8876f13304fba8fcbc59604c7c, type: 3}
+    - target: {fileID: 6170116057778989338, guid: 0a28e53766e284a83bab70b5608d268c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 6170116057778989338, guid: 0a28e53766e284a83bab70b5608d268c, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6170116057778989338, guid: 0a28e53766e284a83bab70b5608d268c, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2797,6 +2823,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1104150862204212261, guid: 0a28e53766e284a83bab70b5608d268c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104150862204212261, guid: 0a28e53766e284a83bab70b5608d268c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104150862204212261, guid: 0a28e53766e284a83bab70b5608d268c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.78
       objectReference: {fileID: 0}
@@ -2843,6 +2877,26 @@ PrefabInstance:
     - target: {fileID: 5448578892979557449, guid: 0a28e53766e284a83bab70b5608d268c, type: 3}
       propertyPath: m_Name
       value: PianoKey (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5966662202496868133, guid: 0a28e53766e284a83bab70b5608d268c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 580013260, guid: f2684a8876f13304fba8fcbc59604c7c, type: 3}
+    - target: {fileID: 6170116057778989338, guid: 0a28e53766e284a83bab70b5608d268c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 6170116057778989338, guid: 0a28e53766e284a83bab70b5608d268c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 6170116057778989338, guid: 0a28e53766e284a83bab70b5608d268c, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6170116057778989338, guid: 0a28e53766e284a83bab70b5608d268c, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

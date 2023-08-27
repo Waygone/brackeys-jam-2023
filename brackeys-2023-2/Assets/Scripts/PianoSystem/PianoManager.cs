@@ -23,6 +23,10 @@ public class PianoManager : MonoBehaviour, IInteractable
     [SerializeField]
     private Color _PressedKeyColor;
     [SerializeField]
+    private SpriteRenderer _SpriteRenderer;
+    [SerializeField]
+    private Sprite _PianoFixedSprite;
+    [SerializeField]
     private DialogueManager _DialogueManager;
     [SerializeField]
     private AudioClip[] _PianoKeysAudioClips;
@@ -39,6 +43,7 @@ public class PianoManager : MonoBehaviour, IInteractable
         {
             if (state == Level3Manager.Level3State.FOUND_PIANO_KEYS)
             {
+                _SpriteRenderer.sprite = _PianoFixedSprite;
                 _isInteractable = true;
             }
         };
